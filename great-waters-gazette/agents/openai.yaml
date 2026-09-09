@@ -1,0 +1,8 @@
+interface:
+  display_name: "Great Waters Gazette"
+  short_description: "Build and publish the daily personalized Gazette"
+  brand_color: "#173A5E"
+  default_prompt: "Use $great-waters-gazette to create and publish today's verified edition."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+:root { --paper: #fbf7e9; --ink: #151515; --navy: #173a5e; --link: #0b5ea8; }
+* { box-sizing: border-box; }
+html, body { background: #e9e5d9; }
+body { margin: 0; color: var(--ink); font-family: Georgia, 'Times New Roman', serif; }
+a { color: var(--link); text-underline-offset: 2px; }
+.gazette-shell { padding: 32px 18px; }
+.gazette { width: min(1120px, 100%); margin: 0 auto; padding: 38px 46px 28px; background: var(--paper); box-shadow: 0 18px 55px rgb(30 36 42 / 14%); }
+.masthead { text-align: center; margin-bottom: 28px; }
+.brand-mark { display: block; width: 50px; height: 50px; margin: 0 auto 9px; border-radius: 12px; }
+.edition-label { margin: 0 0 6px; color: var(--navy); font: 700 0.69rem/1.2 Arial, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; }
+.masthead h1 { margin: 0; font-size: clamp(2.25rem, 5vw, 3.65rem); font-weight: 600; letter-spacing: 0.01em; }
+.edition-date { margin: 7px 0 0; font-size: 1.05rem; }
+.lead-grid { display: grid; grid-template-columns: minmax(290px, 0.72fr) minmax(0, 1.45fr); gap: 28px; align-items: start; }
+.weather-panel h2, .news-item h2 { margin: 0; padding-bottom: 7px; border-bottom: 2px solid var(--navy); font-size: 1.22rem; font-weight: 500; }
+.weather-list { padding: 12px 0 8px; }
+.weather-row { display: grid; grid-template-columns: 60px minmax(120px, 1fr) auto; gap: 10px; padding: 5px 0; font-size: 0.86rem; }
+.weather-row span:last-child { font-variant-numeric: tabular-nums; }
+.source-link { font: 0.78rem/1.4 Arial, sans-serif; }
+.featured-photo { margin: 0; }
+.featured-photo img { display: block; width: 100%; aspect-ratio: 16 / 7.3; object-fit: cover; }
+.featured-photo figcaption { margin-top: 8px; font-size: 0.76rem; line-height: 1.35; }
+.stoic-card { margin: 26px 0 31px; padding: 12px 16px 11px; border: 2px solid var(--navy); border-radius: 6px; }
+.stoic-card h2 { margin: 0 0 8px; color: var(--navy); font-size: 1rem; font-weight: 600; letter-spacing: 0.03em; }
+.stoic-card p { margin: 0; font-size: 0.9rem; font-style: italic; }
+.news-list { display: grid; gap: 19px; }
+.news-item h2 { font-size: 1.08rem; }
+.news-item p { display: flex; gap: 0.3rem; margin: 7px 6px 0; font-size: clamp(0.76rem, 1.08vw, 0.9rem); white-space: nowrap; }
+.news-item p span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.news-item p a { flex: none; white-space: nowrap; }
+footer { margin-top: 32px; color: var(--navy); text-align: center; font-size: 0.72rem; font-style: italic; }
+
+@media (max-width: 720px) {
+  .gazette-shell { padding: 0; }
+  .gazette { padding: 28px 20px 24px; box-shadow: none; }
+  .masthead { margin-bottom: 22px; }
+  .brand-mark { width: 58px; height: 58px; margin-bottom: 10px; border-radius: 14px; }
+  .lead-grid { grid-template-columns: 1fr; gap: 22px; }
+  .featured-photo { order: -1; }
+  .featured-photo img { aspect-ratio: 4 / 2.45; }
+  .weather-row { grid-template-columns: 54px minmax(0, 1fr) auto; font-size: 0.82rem; }
+  .stoic-card { margin: 23px 0 31px; }
+  .news-list { gap: 22px; }
+  .news-item h2 { font-size: 1.12rem; }
+  .news-item p { display: block; margin-top: 8px; font-size: 0.96rem; line-height: 1.48; white-space: normal; }
+  .news-item p span { overflow: visible; }
+}

@@ -1,0 +1,22 @@
+# Cloud deployment checklist
+
+- [ ] Connect the `Gary_Skills` GitHub repository to the target ChatGPT workspace with read/write access.
+- [ ] Install or attach the complete `great-waters-gazette` skill and confirm it is discoverable.
+- [ ] Confirm ChatGPT web scheduled tasks are enabled for the workspace.
+- [ ] Confirm the task has live web access, the GitHub connection, the PDF capability, and Sites building/hosting access.
+- [ ] Confirm Python 3 and the required PDF/image libraries are available.
+- [ ] Confirm a PDF can be rendered to an image and inspected.
+- [ ] Confirm Node.js 22.13+ and pnpm are available.
+- [ ] For a local test only, run `python3 scripts/install_project.py <workspace-path>` into a new empty destination.
+- [ ] Confirm the story history and Porsche queue are present.
+- [ ] Confirm the first run can save its licensed daily photograph into `great-waters-gazette/assets/` before PDF generation.
+- [ ] Initialize or connect Sites hosting without committing a hosting ID, token, or secret to GitHub.
+- [ ] Build and publish a test site, then verify it from the public URL on desktop and phone.
+- [ ] Confirm The Weather Channel resolves ZIP 31024 to Eatonton, Georgia and exposes five dated forecast rows plus an as-of time.
+- [ ] Run a full test edition and verify one page, five matching weather rows, clickable links, archive equality, visual balance, responsive display, mobile icon, and live edition date.
+- [ ] Create a standalone ChatGPT web scheduled task for 6:00 AM America/New_York using `SCHEDULED_TASK_PROMPT.md`.
+- [ ] Confirm the scheduled task runs in the cloud and does not target a local project, local worktree, or Mac folder.
+- [ ] Confirm it checks durable GitHub state and the live site before rerunning and never creates missed historical editions.
+- [ ] Confirm every actual run begins its completion or failure notice with the full intended Gazette date and, on success, links both the site and PDF.
+- [ ] Power off the Mac for one controlled test and confirm the cloud task still runs, publishes, and reports the dated result.
+- [ ] Confirm GitHub is serving only as the central skill/state repository and is not configured as the scheduler.

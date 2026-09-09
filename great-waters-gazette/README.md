@@ -1,41 +1,52 @@
-# Great Waters Gazette portable cloud skill
+# Great Waters Gazette portable agent skill
 
-This repository is the portable source of truth for the complete Gazette workflow. It can be installed in another ChatGPT/Codex environment without copying machine-specific paths, secrets, build caches, deployment identifiers, or prior generated PDFs. GitHub stores and distributes the skill; it does not run the Gazette.
+This repository is the portable source of truth for the complete Gazette workflow. The core package is intentionally vendor-neutral and can be installed in any capable AI-agent or automation environment, including ChatGPT/Codex, Claude Cowork, Perplexity Computer, or a future compatible tool. GitHub stores and distributes the skill; it does not run the Gazette.
 
 ## Included
 
 - Editorial, sourcing, design, weather, no-repeat, Porsche queue, PDF QA, site publication, catch-up, and dated-confirmation rules.
 - A working ReportLab PDF builder as the current layout reference.
 - Durable `story-history.md`, `porsche-story-queue.md`, and `carryover.md` state.
-- The responsive Sites application source and mobile icons.
+- The responsive website source and mobile icons.
 - A non-destructive project installer.
 
 The embedded history, carryover ledger, and Porsche queue are a current migration snapshot. The target environment should continue those files in durable repository state so repeat prevention survives each run and any future move.
 
-## Preferred runtime: ChatGPT cloud
+## Portable capability contract
 
-- A ChatGPT workspace with web scheduled tasks enabled.
-- This skill installed or attached to the scheduled chat.
-- The GitHub connection with read/write access to the repository used for durable history, queues, and generated source changes.
-- Sites building/hosting access for the public Gazette site.
+- A remote scheduler capable of running once daily at 6:00 AM America/New_York without a personal computer being online.
+- The complete skill folder available to the agent, with `SKILL.md` at its root.
+- Read/write access to durable repository or object-store state for history, queues, and approved source changes.
+- A hosting/deployment capability for the public Gazette site.
 - Live web/browser access, including The Weather Channel and story/photo sources.
-- A cloud execution environment with Python 3 plus `reportlab`, `Pillow`, `pdfplumber`, and `pypdf`.
+- A writable execution environment with Python 3 plus `reportlab`, `Pillow`, `pdfplumber`, and `pypdf`.
 - Poppler PDF rendering tools (`pdftoppm` or equivalent).
 - Node.js 22.13 or newer and pnpm.
-- The Codex PDF skill plus Sites building and hosting skills.
-- A configured Sites deployment available to the cloud task. The portable template intentionally has no deployment ID or secret.
+- Equivalent PDF inspection and website build/deployment capabilities.
+- A configured hosting target available to the scheduled agent. The portable template intentionally has no deployment ID or secret.
 
-The scheduled task should run at 6:00 AM America/New_York. It must use repository-backed state because web scheduled tasks do not retain access to a Mac folder between runs. The Mac may be asleep or powered off. See [references/cloud-run.md](references/cloud-run.md) and [SCHEDULED_TASK_PROMPT.md](SCHEDULED_TASK_PROMPT.md).
+The scheduled task should run at 6:00 AM America/New_York and use durable remote state rather than assuming that a local folder persists. The user's computer may be asleep or powered off. See [references/runtime-and-adapters.md](references/runtime-and-adapters.md) and [RUN_PROMPT.md](RUN_PROMPT.md).
+
+## Known-service adapters
+
+The core instructions do not depend on a particular vendor. Verified setup notes are maintained separately for:
+
+- ChatGPT web scheduled tasks and Codex local fallback.
+- Claude Cowork scheduled tasks.
+- Perplexity Computer scheduled tasks and skill upload.
+- Any other agent or automation platform that satisfies the capability contract.
+
+Use only the adapter for the chosen environment. Provider names, UI paths, plugins, connectors, and hosting products belong in the adapter—not in the core workflow.
 
 ## Optional local fallback
 
-The same package can be installed into a local Codex environment for manual runs or emergency recovery. Local automations require the computer and Codex to be available and therefore are not the primary production scheduler.
+The same package can be installed into a local agent environment for manual runs or emergency recovery. Local automations require the computer and agent application to be available and therefore are not the primary production scheduler.
 
 ## Install
 
-Install this entire folder as the `great-waters-gazette` skill in the target environment. For a local working copy, run `python3 scripts/install_project.py /path/to/new/gazette-workspace`.
+Install or upload this entire folder as the `great-waters-gazette` skill in the target environment. If the service accepts ZIP uploads, preserve `SKILL.md` at the ZIP root. For a local working copy, run `python3 scripts/install_project.py /path/to/new/gazette-workspace`.
 
-The installer refuses to overwrite an existing destination. Follow [DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md) to verify dependencies and create the 6:00 AM America/New_York cloud scheduled task.
+The installer refuses to overwrite an existing destination. Follow [DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md), choose the correct service adapter, and create the 6:00 AM America/New_York remote scheduled task.
 
 The history and Porsche queue preserve the current no-repeat record. Original archive PDFs and daily photographs are excluded because they are generated evidence, not required runtime code. Copy them separately only if a complete historical archive is desired.
 

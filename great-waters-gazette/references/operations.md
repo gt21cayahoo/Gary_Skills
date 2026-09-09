@@ -2,7 +2,7 @@
 
 ## Working layout
 
-Use `great-waters-gazette/` for the builder, assets, archive, history and queues; `great-waters-gazette-site/` for the responsive site; and `output/pdf/` for direct-open dated PDFs. In cloud runs, create these as an ephemeral checkout/workspace from the connected repository and commit only durable, non-secret state. Derive paths from the workspace or script location. Never hardcode a username, home folder, Codex runtime path, hosting project ID, or secret.
+Use `great-waters-gazette/` for the builder, assets, archive, history and queues; `great-waters-gazette-site/` for the responsive site; and `output/pdf/` for direct-open dated PDFs. In remote runs, create these in the service's temporary workspace from durable repository state and write back only durable, non-secret updates. Derive paths from the workspace or script location. Never hardcode a username, home folder, vendor runtime path, hosting project ID, or secret.
 
 ## Daily run
 
@@ -20,14 +20,14 @@ Use `great-waters-gazette/` for the builder, assets, archive, history and queues
 
 ## Automation
 
-Schedule a standalone ChatGPT web task at 6:00 AM America/New_York. The task must run in the cloud, attach this skill, and use connected GitHub and Sites capabilities. GitHub is the durable source/state repository, not the scheduler. Do not configure the production task against a local project, local worktree, or Mac path.
+Schedule one standalone remote task at 6:00 AM America/New_York. The task must attach or load this skill and use the environment's authorized durable-state and hosting capabilities. GitHub is the default source/state repository, not the scheduler. Do not configure the production task against a local computer path.
 
 Every trigger uses the three-marker completion check. If today's edition is complete and live, remain quiet; if missing, run it immediately. Commit updated history, queues, carryover, and portable source changes only after all publication gates pass. Do not commit credentials, deployment identifiers, licensed image binaries, generated dependency folders, or temporary build output.
 
-Use a local Codex heartbeat only as an explicitly requested fallback. Local scheduling is not computer-independent.
+Use a local scheduler only as an explicitly requested fallback. Local scheduling is not computer-independent.
 
 Notification text must include the edition date whenever work ran or failed. Quiet no-op checks may state that today's dated edition is already complete and live.
 
 ## Site initialization
 
-The template omits `.openai/hosting.json`. Use Sites building and hosting in the target environment to initialize a new project or deliberately connect an authorized existing one. Install from the lockfile, build, publish, and verify the public page. Do not hand-edit deployment metadata or reuse another environment's identifier.
+The template omits provider deployment metadata. Use the target environment's hosting capability to initialize a new project or deliberately connect an authorized existing one. Install from the lockfile, build, publish, and verify the public page. Do not hand-edit deployment metadata or reuse another environment's identifier.

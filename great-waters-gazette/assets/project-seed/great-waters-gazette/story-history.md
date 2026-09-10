@@ -2,6 +2,20 @@
 
 Check this ledger before selecting each edition. Do not reuse the same URL or the same underlying development.
 
+## 2026-09-10
+
+- AI Story of the Day — ENISA tests Anthropic Mythos 5 and OpenAI GPT-6 Astra — https://www.reuters.com/technology/eus-cybersecurity-agency-granted-access-mythos-5-ai-model-commission-says-2026-09-10/
+- Microsoft 365 Copilot — Outlook emails as Copilot Notebook sources — https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes
+- ChatGPT — Voice access to GPT-5.6 and GPT-6 Astra — https://help.openai.com/en/articles/6825453-chatgpt-release-notes
+- Tesla Manufacturing & Expansion — limited Austin Cybercab rides during NHTSA review — https://www.reuters.com/technology/us-auto-safety-regulator-says-evaluating-teslas-cybercab-rollout-2026-09-04/
+- Lighting Industry — Loxone positions lighting as a building-system layer — https://www.lightnowblog.com/2026/09/loxone-positions-lighting-as-a-building-system-layer/
+- Lighting Industry — Flock camera controversy reaches streetlight infrastructure — https://www.lightnowblog.com/2026/09/flock-controversy-comes-to-streetlights/
+- 3D Printing News — Continuous Composites wins Navy SBIR for multifunctional printed UAV structures — https://3dprint.com/331981/continuous-composites-gets-phase-ii-sbir-for-embedding-electronics-in-uavs/
+- Porsche 997 & 911 — new 997.1 owner guidance on oil level, wheel-bolt torque and rear trim — https://rennlist.com/forums/997-forum/1517934-997-1-new-owner-questions.html
+- AI-Powered Solopreneur Business — contractor voice-note-to-job-brief service — https://help.openai.com/en/articles/6825453-chatgpt-release-notes
+- Anna Maria Island News — Gulf Islands Ferry opens Coquina Bayside stop — https://www.islander.org/2026/09/gulf-islands-ferry-opens-coquina-bayside-stop/
+- Lake Oconee News — Neighbors Helping Neighbors town hall at Lakeside Church — https://lakeoconeelife.com/lake-oconee-calendar-of-events/town-hall-meeting-september0910
+
 ## 2026-09-09
 
 - AI Story of the Day — AI labs seek shared restraints as capabilities accelerate — https://www.axios.com/2026/09/09/openai-artificial-general-intelligence-safety

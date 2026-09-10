@@ -13,9 +13,9 @@ from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT.parent / "output" / "pdf" / "Great_Waters_Gazette_2026-09-09.pdf"
+OUT = ROOT.parent / "output" / "pdf" / "Great_Waters_Gazette_2026-09-10.pdf"
 ARCHIVE = ROOT / "archive" / OUT.name
-PHOTO = ROOT / "assets" / "2026-09-08-picture-of-the-day.jpg"
+PHOTO = ROOT / "assets" / "2026-09-09-picture-of-the-day.jpg"
 
 CREAM = HexColor("#FBF7E9")
 NAVY = HexColor("#173A5E")
@@ -23,28 +23,28 @@ LINK = HexColor("#0B5EA8")
 TEXT = HexColor("#151515")
 
 WEATHER_URL = "https://weather.com/us/georgia/eatonton/postcode/31024/tenday"
-PHOTO_URL = "https://commons.wikimedia.org/wiki/File:Sunset_over_Trommekilen_from_Norrkila_6.jpg"
+PHOTO_URL = "https://commons.wikimedia.org/wiki/File:189_Red-and-green_macaw_couple_flying_in_Chapada_dos_Guimar%C3%A3es_National_Park_Photo_by_Giles_Laurent.jpg"
 STOIC_URL = "https://dailystoic.com/podcast/"
 
 WEATHER = [
-    ("Wed 09", "Partly cloudy (1%)", "91 / 72"),
-    ("Thu 10", "Partly cloudy (23%)", "91 / 73"),
-    ("Fri 11", "Scattered storms (58%)", "90 / 72"),
-    ("Sat 12", "Scattered storms (44%)", "88 / 72"),
-    ("Sun 13", "Partly cloudy (24%)", "91 / 71"),
+    ("Today", "AM clouds / PM sun (10%)", "93 / 73"),
+    ("Fri 11", "PM thunderstorms (54%)", "91 / 72"),
+    ("Sat 12", "Partly cloudy (24%)", "89 / 72"),
+    ("Sun 13", "Partly cloudy (24%)", "92 / 71"),
+    ("Mon 14", "Mostly sunny (15%)", "95 / 72"),
 ]
 
 STORIES = [
-    ("AI Story of the Day", "AI labs are asking governments and rivals for shared restraints as capabilities accelerate.", "https://www.axios.com/2026/09/09/openai-artificial-general-intelligence-safety"),
-    ("Microsoft 365 Copilot", "Copilot can ground answers in authorized private Viva Engage posts; tip: ask for expert consensus.", "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"),
-    ("ChatGPT", "ChatGPT Images 2.5 improves editing and speed; tip: sketch a layout before generating the image.", "https://openai.com/index/introducing-chatgpt-images-2-5/"),
-    ("Tesla Manufacturing & Expansion", "Samsung's Taylor 2nm fab is reportedly booked by Tesla AI5 and AI6 chip orders.", "https://www.trendforce.com/news/2026/09/09/news-samsung-taylor-fab-reportedly-fully-booked-for-2nm-before-operations-begin-fab-2-preparations-accelerate/"),
+    ("AI Story of the Day", "ENISA is testing Anthropic's Mythos 5 and OpenAI's GPT-6 Astra.", "https://www.reuters.com/technology/eus-cybersecurity-agency-granted-access-mythos-5-ai-model-commission-says-2026-09-10/"),
+    ("Microsoft 365 Copilot", "Copilot Notebooks can use Outlook emails as sources; tip: add key decision threads before drafting.", "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"),
+    ("ChatGPT", "Voice can use GPT-5.6 or GPT-6 Astra; tip: raise reasoning for complex dictated work.", "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"),
+    ("Tesla Manufacturing & Expansion", "Tesla began limited Cybercab rides in Austin as NHTSA evaluates the steering-wheel-free rollout.", "https://www.reuters.com/technology/us-auto-safety-regulator-says-evaluating-teslas-cybercab-rollout-2026-09-04/"),
     ("Lighting Industry - Top Two", "", ""),
-    ("3D Printing News", "California's AB 2047 printer-control bill passed the legislature and awaits the governor.", "https://www.fabbaloo.com/news/california-ab-2047-3d-printer-bill-passes-legislature-awaits-governors-decision"),
-    ("Porsche 997 & 911", "Owners compare a 997.1 Carrera 4 and Carrera S on traction, steering feel and buying risk.", "https://www.reddit.com/r/porsche911/comments/1vw7eqp/9971_carrera_4_vs_carrera_s/"),
-    ("AI-Powered Solopreneur Business", "Opportunity: sell same-day catalog-image refreshes to small retailers with Images 2.5.", "https://openai.com/index/introducing-chatgpt-images-2-5/"),
-    ("Anna Maria Island News", "About 150 residents joined Anna Maria's town hall on the city's evolving parking study.", "https://amisun.com/anna-maria-hosts-parking-study-meeting/"),
-    ("Lake Oconee News", "A Fiber Arts Gathering brings local makers together in Madison today.", "https://lakeoconeelife.com/lake-oconee-calendar-of-events"),
+    ("3D Printing News", "Continuous Composites won a Navy SBIR to embed electrical functions in printed UAV structures.", "https://3dprint.com/331981/continuous-composites-gets-phase-ii-sbir-for-embedding-electronics-in-uavs/"),
+    ("Porsche 997 & 911", "A new 997.1 owner gets practical guidance on oil-level readings, wheel-bolt torque and rear trim.", "https://rennlist.com/forums/997-forum/1517934-997-1-new-owner-questions.html"),
+    ("AI-Powered Solopreneur Business", "Offer contractors a $750/week voice-note-to-job-brief service; validate with three owner-operators.", "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"),
+    ("Anna Maria Island News", "Gulf Islands Ferry added a Coquina Bayside stop, opening another car-free route to Coquina Beach.", "https://www.islander.org/2026/09/gulf-islands-ferry-opens-coquina-bayside-stop/"),
+    ("Lake Oconee News", "Neighbors Helping Neighbors holds a 4 p.m. Lakeside Church town hall on local family-support projects.", "https://lakeoconeelife.com/lake-oconee-calendar-of-events/town-hall-meeting-september0910"),
 ]
 
 
@@ -88,7 +88,7 @@ def build(path):
     path.parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(path), pagesize=letter)
     width, height = letter
-    c.setTitle("Great Waters Gazette - Wednesday, September 9, 2026")
+    c.setTitle("Great Waters Gazette - Thursday, September 10, 2026")
     c.setAuthor("Great Waters Gazette")
     c.setFillColor(CREAM)
     c.rect(0, 0, width, height, stroke=0, fill=1)
@@ -97,7 +97,7 @@ def build(path):
     c.setFont("Times-Bold", 28)
     c.drawCentredString(width / 2, 750, "Great Waters Gazette")
     c.setFont("Times-Roman", 12)
-    c.drawCentredString(width / 2, 730, "Wednesday, September 9, 2026")
+    c.drawCentredString(width / 2, 730, "Thursday, September 10, 2026")
 
     left, right = 42, 570
     top = 704
@@ -122,14 +122,14 @@ def build(path):
         c.drawString(left + 49, y, summary)
         c.drawRightString(left + weather_w, y, temps)
         y -= 16
-    link_text(c, left, y - 1, "Weather Channel - 11:16 AM EDT", WEATHER_URL, size=8.2)
+    link_text(c, left, y - 1, "Weather Channel - 9:46 AM EDT", WEATHER_URL, size=8.2)
 
     photo_h = 132
     draw_image_cover(c, PHOTO, photo_x, top - photo_h + 2, photo_w, photo_h)
     c.linkURL(PHOTO_URL, (photo_x, top - photo_h + 2, photo_x + photo_w, top + 2), relative=0)
     caption = Paragraph(
-        '<b>Yesterday\'s Picture:</b> Sunset over Trommekilen and Brofjorden in Lysekil, Sweden. '
-        '<font color="#0B5EA8">W.carter / Wikimedia Commons / CC0</font>',
+        '<b>Yesterday\'s Picture:</b> Red-and-green macaws in flight at Chapada dos Guimaraes National Park. '
+        '<font color="#0B5EA8">Giles Laurent / Wikimedia Commons / CC BY-SA 4.0</font>',
         ParagraphStyle("caption", fontName="Times-Roman", fontSize=7.5, leading=9, textColor=TEXT),
     )
     caption.wrapOn(c, photo_w, 32)
@@ -142,7 +142,7 @@ def build(path):
     c.setFont("Times-Bold", 9.8)
     c.drawString(left + 9, 536, "Today's Stoic Practice")
     stoic = Paragraph(
-        'Meet the next duty without rehearsing its difficulty; attention belongs to the action in front of you. '
+        'Choose the next useful action, then give it your full attention before judging the day. '
         '- <link href="https://dailystoic.com/podcast/" color="#0B5EA8"><u>Daily Stoic</u></link>',
         ParagraphStyle("stoic", fontName="Times-Italic", fontSize=8.2, leading=9.4, textColor=TEXT),
     )
@@ -159,8 +159,8 @@ def build(path):
         c.setLineWidth(1.2)
         c.line(left, y - 4, right, y - 4)
         if heading == "Lighting Industry - Top Two":
-            fitted_story_line(c, left + 4, y - 17, "PTAB invalidated every challenged claim in Feit Electric's white-filament LED patent.", "https://edisonreport.com/2026/09/08/ptab-finds-all-challenged-claims-in-feit-electric-led-patent-unpatentable/", right - left - 4, label="Read more")
-            fitted_story_line(c, left + 4, y - 31, "Orion won a second multimillion-dollar hyperscaler order for data-center LED lighting.", "https://edisonreport.com/2026/09/08/orion-secures-second-multimillion-dollar-data-center-order-from-global-hyperscaler/", right - left - 4, label="Read more")
+            fitted_story_line(c, left + 4, y - 17, "Loxone is positioning lighting as a building-system layer beside HVAC, shading, energy and security.", "https://www.lightnowblog.com/2026/09/loxone-positions-lighting-as-a-building-system-layer/", right - left - 4, label="Read more")
+            fitted_story_line(c, left + 4, y - 31, "Flock camera controversy is pulling streetlights into the national surveillance debate.", "https://www.lightnowblog.com/2026/09/flock-controversy-comes-to-streetlights/", right - left - 4, label="Read more")
             y -= 57
         else:
             fitted_story_line(c, left + 4, y - 18, story, url, right - left - 4)

@@ -1,7 +1,7 @@
 const weather = [
-  ['Wed 09', 'Partly cloudy (1%)', '91 / 72'],
+  ['Wed 09', 'Partly cloudy (0%)', '91 / 72'],
   ['Thu 10', 'Partly cloudy (23%)', '91 / 73'],
-  ['Fri 11', 'Scattered storms (58%)', '90 / 72'],
+  ['Fri 11', 'Scattered storms (59%)', '90 / 72'],
   ['Sat 12', 'Scattered storms (44%)', '88 / 72'],
   ['Sun 13', 'Partly cloudy (24%)', '91 / 71'],
 ];
@@ -29,6 +29,9 @@ export default function Home() {
           <p className="edition-label">The morning edition</p>
           <h1 id="gazette-title">Great Waters Gazette</h1>
           <p className="edition-date">Wednesday, September 9, 2026</p>
+          <p className="edition-actions">
+            <a href="/Great_Waters_Gazette_2026-09-09.pdf">Open the one-page PDF edition</a>
+          </p>
         </header>
 
         <section className="lead-grid" aria-label="Weather and featured photograph">
@@ -41,7 +44,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <a className="source-link" href="https://weather.com/us/georgia/eatonton/postcode/31024/tenday">Weather Channel - 11:16 AM EDT</a>
+            <a className="source-link" href="https://weather.com/us/georgia/eatonton/postcode/31024/tenday">Weather Channel - 12:55 PM EDT</a>
           </div>
 
           <figure className="featured-photo">
@@ -57,13 +60,21 @@ export default function Home() {
           <p>Meet the next duty without rehearsing its difficulty; attention belongs to the action in front of you. <a href="https://dailystoic.com/podcast/">Daily Stoic</a></p>
         </aside>
 
-        <section className="news-list" aria-label="Today's news">
-          {stories.map(([section, summary, url]) => (
-            <article className="news-item" key={section}>
-              <h2>{section}</h2>
-              <p><span>{summary}</span>{' '}<a href={url}>Read more</a></p>
-            </article>
-          ))}
+        <section className="briefing" aria-labelledby="briefing-title">
+          <div className="section-heading">
+            <p>Today&apos;s briefing</p>
+            <h2 id="briefing-title">News worth your time</h2>
+          </div>
+          <div className="news-list">
+            {stories.map(([section, summary, url], index) => (
+              <article className="news-item" key={section}>
+                <span className="story-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <h3>{section}</h3>
+                <p>{summary}</p>
+                <a className="read-more" href={url}>Read the source <span aria-hidden="true">↗</span></a>
+              </article>
+            ))}
+          </div>
         </section>
 
         <footer>A concise morning digest - sources linked in every section</footer>

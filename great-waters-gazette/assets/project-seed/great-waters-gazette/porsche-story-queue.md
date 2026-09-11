@@ -6,7 +6,9 @@ Prioritize standard 997.1 and 997.2 Carrera, Carrera S, Carrera 4/4S, Targa, Tur
 
 Remove a candidate after publication and record it in `story-history.md`. Remove candidates older than three months or whose access becomes restricted.
 
-Last reviewed: 2026-09-10. The published Rennlist new-owner thread was recorded in `story-history.md`; no unused candidate was retained.
+Last reviewed: 2026-09-11. No worthwhile unused standard 997.1/997.2 road-car candidate passed access, recency, quality and repeat checks; no item was published.
+
+Previous review: 2026-09-10. The published Rennlist new-owner thread was recorded in `story-history.md`; no unused candidate was retained.
 
 ## Verified unused candidates
 

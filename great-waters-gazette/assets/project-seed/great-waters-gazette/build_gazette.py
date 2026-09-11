@@ -2,7 +2,6 @@ from pathlib import Path
 import shutil
 
 from reportlab.lib.colors import HexColor
-from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.utils import ImageReader
@@ -13,9 +12,9 @@ from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT.parent / "output" / "pdf" / "Great_Waters_Gazette_2026-09-10.pdf"
+OUT = ROOT.parent / "output" / "pdf" / "Great_Waters_Gazette_2026-09-11.pdf"
 ARCHIVE = ROOT / "archive" / OUT.name
-PHOTO = ROOT / "assets" / "2026-09-09-picture-of-the-day.jpg"
+PHOTO = ROOT / "assets" / "2026-09-10-picture-of-the-day.jpg"
 
 CREAM = HexColor("#FBF7E9")
 NAVY = HexColor("#173A5E")
@@ -23,28 +22,27 @@ LINK = HexColor("#0B5EA8")
 TEXT = HexColor("#151515")
 
 WEATHER_URL = "https://weather.com/us/georgia/eatonton/postcode/31024/tenday"
-PHOTO_URL = "https://commons.wikimedia.org/wiki/File:189_Red-and-green_macaw_couple_flying_in_Chapada_dos_Guimar%C3%A3es_National_Park_Photo_by_Giles_Laurent.jpg"
-STOIC_URL = "https://dailystoic.com/podcast/"
+PHOTO_URL = "https://commons.wikimedia.org/wiki/File:Lake_Geneva_from_Chillon_Castle.jpg"
 
 WEATHER = [
-    ("Today", "AM clouds / PM sun (10%)", "93 / 73"),
-    ("Fri 11", "PM thunderstorms (54%)", "91 / 72"),
-    ("Sat 12", "Partly cloudy (24%)", "89 / 72"),
-    ("Sun 13", "Partly cloudy (24%)", "92 / 71"),
-    ("Mon 14", "Mostly sunny (15%)", "95 / 72"),
+    ("Today", "PM thunderstorms (63%)", "91 / 71"),
+    ("Sat 12", "PM thunderstorms (47%)", "86 / 71"),
+    ("Sun 13", "Partly cloudy (24%)", "93 / 71"),
+    ("Mon 14", "Partly cloudy (15%)", "96 / 72"),
+    ("Tue 15", "Mostly sunny (15%)", "92 / 67"),
 ]
 
 STORIES = [
-    ("AI Story of the Day", "ENISA is testing Anthropic's Mythos 5 and OpenAI's GPT-6 Astra.", "https://www.reuters.com/technology/eus-cybersecurity-agency-granted-access-mythos-5-ai-model-commission-says-2026-09-10/"),
-    ("Microsoft 365 Copilot", "Copilot Notebooks can use Outlook emails as sources; tip: add key decision threads before drafting.", "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"),
-    ("ChatGPT", "Voice can use GPT-5.6 or GPT-6 Astra; tip: raise reasoning for complex dictated work.", "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"),
-    ("Tesla Manufacturing & Expansion", "Tesla began limited Cybercab rides in Austin as NHTSA evaluates the steering-wheel-free rollout.", "https://www.reuters.com/technology/us-auto-safety-regulator-says-evaluating-teslas-cybercab-rollout-2026-09-04/"),
+    ("AI Story of the Day", "Sam Altman told staff OpenAI is open to slowing AI development as safety concerns rise.", "https://www.reuters.com/business/altman-tells-staff-openai-is-open-slowing-ai-development-bloomberg-news-reports-2026-09-11/"),
+    ("Microsoft 365 Copilot", "Excel's =COPILOT preview retires Sept. 14; tip: move text tasks to the paid Copilot side pane.", "https://www.windowscentral.com/artificial-intelligence/microsoft-copilot/microsoft-is-ditching-the-copilot-function-in-excel-before-it-even-launches"),
+    ("ChatGPT", "ChatGPT for Financial Services adds licensed data and firm templates; tip: require cited source trails.", "https://www.reuters.com/business/openai-launches-chatgpt-financial-services-industry-2026-09-10/"),
+    ("Tesla Manufacturing & Expansion", "Cybercab's hidden touch joystick may support end-of-line checks and depot repositioning.", "https://www.caranddriver.com/news/a73667574/tesla-cybercab-joystick-screen-controls/"),
     ("Lighting Industry - Top Two", "", ""),
-    ("3D Printing News", "Continuous Composites won a Navy SBIR to embed electrical functions in printed UAV structures.", "https://3dprint.com/331981/continuous-composites-gets-phase-ii-sbir-for-embedding-electronics-in-uavs/"),
-    ("Porsche 997 & 911", "A new 997.1 owner gets practical guidance on oil-level readings, wheel-bolt torque and rear trim.", "https://rennlist.com/forums/997-forum/1517934-997-1-new-owner-questions.html"),
-    ("AI-Powered Solopreneur Business", "Offer contractors a $750/week voice-note-to-job-brief service; validate with three owner-operators.", "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"),
-    ("Anna Maria Island News", "Gulf Islands Ferry added a Coquina Bayside stop, opening another car-free route to Coquina Beach.", "https://www.islander.org/2026/09/gulf-islands-ferry-opens-coquina-bayside-stop/"),
-    ("Lake Oconee News", "Neighbors Helping Neighbors holds a 4 p.m. Lakeside Church town hall on local family-support projects.", "https://lakeoconeelife.com/lake-oconee-calendar-of-events/town-hall-meeting-september0910"),
+    ("3D Printing News", "Stratasys will bring production tooling, fixtures and end-use workflows to IMTS 2026.", "https://investors.stratasys.com/news-events/press-releases/detail/992/stratasys-brings-production-proven-additive-manufacturing"),
+    ("Porsche 997 & 911", "No worthwhile unused standard 997 road-car item remains in the verified three-month queue.", ""),
+    ("AI-Powered Solopreneur Business", "Offer merchants a $1,000 AI payment-reconciliation setup; validate with three Shopify operators.", "https://www.expresscomputer.in/news/78-of-indian-businesses-would-switch-payment-gateways-for-ai-capabilities-zoho-survey/138608/"),
+    ("Anna Maria Island News", "Anna Maria City Pier remediation is wrapping up, leaving one final construction phase before reopening.", "https://www.islander.org/2026/09/amcp-remediation-work-wraps-up/"),
+    ("Lake Oconee News", "Eatonton hosts a 25th-anniversary 9/11 remembrance this morning at Veterans Wall of Honor Park.", "https://www.facebook.com/putnamcountyga/posts/1359728646334136/"),
 ]
 
 
@@ -71,6 +69,14 @@ def link_text(c, x, y, label, url, font="Times-Roman", size=9.4):
 
 def fitted_story_line(c, x, y, text, url, max_width, label="Read more", start_size=8.8, min_size=7.2):
     sep = " - "
+    if not url:
+        size = start_size
+        while size > min_size and stringWidth(text, "Times-Roman", size) > max_width:
+            size -= 0.1
+        c.setFont("Times-Roman", size)
+        c.setFillColor(TEXT)
+        c.drawString(x, y, text)
+        return
     size = start_size
     while size > min_size:
         total = stringWidth(text + sep, "Times-Roman", size) + stringWidth(label, "Times-Roman", size)
@@ -88,7 +94,7 @@ def build(path):
     path.parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(path), pagesize=letter)
     width, height = letter
-    c.setTitle("Great Waters Gazette - Thursday, September 10, 2026")
+    c.setTitle("Great Waters Gazette - Friday, September 11, 2026")
     c.setAuthor("Great Waters Gazette")
     c.setFillColor(CREAM)
     c.rect(0, 0, width, height, stroke=0, fill=1)
@@ -97,7 +103,7 @@ def build(path):
     c.setFont("Times-Bold", 28)
     c.drawCentredString(width / 2, 750, "Great Waters Gazette")
     c.setFont("Times-Roman", 12)
-    c.drawCentredString(width / 2, 730, "Thursday, September 10, 2026")
+    c.drawCentredString(width / 2, 730, "Friday, September 11, 2026")
 
     left, right = 42, 570
     top = 704
@@ -122,14 +128,14 @@ def build(path):
         c.drawString(left + 49, y, summary)
         c.drawRightString(left + weather_w, y, temps)
         y -= 16
-    link_text(c, left, y - 1, "Weather Channel - 9:46 AM EDT", WEATHER_URL, size=8.2)
+    link_text(c, left, y - 1, "Weather Channel - 9:00 AM EDT", WEATHER_URL, size=8.2)
 
     photo_h = 132
     draw_image_cover(c, PHOTO, photo_x, top - photo_h + 2, photo_w, photo_h)
     c.linkURL(PHOTO_URL, (photo_x, top - photo_h + 2, photo_x + photo_w, top + 2), relative=0)
     caption = Paragraph(
-        '<b>Yesterday\'s Picture:</b> Red-and-green macaws in flight at Chapada dos Guimaraes National Park. '
-        '<font color="#0B5EA8">Giles Laurent / Wikimedia Commons / CC BY-SA 4.0</font>',
+        '<b>Yesterday\'s Picture:</b> Lake Geneva from Chillon Castle at sunset. '
+        '<font color="#0B5EA8">Dmitry A. Mottl / Wikimedia Commons / CC BY-SA 4.0 (cropped)</font>',
         ParagraphStyle("caption", fontName="Times-Roman", fontSize=7.5, leading=9, textColor=TEXT),
     )
     caption.wrapOn(c, photo_w, 32)
@@ -142,14 +148,13 @@ def build(path):
     c.setFont("Times-Bold", 9.8)
     c.drawString(left + 9, 536, "Today's Stoic Practice")
     stoic = Paragraph(
-        'Choose the next useful action, then give it your full attention before judging the day. '
+        'Do not postpone the duty in front of you; steady action is remembrance made useful. '
         '- <link href="https://dailystoic.com/podcast/" color="#0B5EA8"><u>Daily Stoic</u></link>',
         ParagraphStyle("stoic", fontName="Times-Italic", fontSize=8.2, leading=9.4, textColor=TEXT),
     )
     stoic.wrapOn(c, right - left - 18, 20)
     stoic.drawOn(c, left + 9, 517)
 
-    # Preserve a clear visual pause between the Stoic practice and the news.
     y = 487
     for heading, story, url in STORIES:
         c.setFillColor(TEXT)
@@ -159,8 +164,8 @@ def build(path):
         c.setLineWidth(1.2)
         c.line(left, y - 4, right, y - 4)
         if heading == "Lighting Industry - Top Two":
-            fitted_story_line(c, left + 4, y - 17, "Loxone is positioning lighting as a building-system layer beside HVAC, shading, energy and security.", "https://www.lightnowblog.com/2026/09/loxone-positions-lighting-as-a-building-system-layer/", right - left - 4, label="Read more")
-            fitted_story_line(c, left + 4, y - 31, "Flock camera controversy is pulling streetlights into the national surveillance debate.", "https://www.lightnowblog.com/2026/09/flock-controversy-comes-to-streetlights/", right - left - 4, label="Read more")
+            fitted_story_line(c, left + 4, y - 17, "CEDIA signals a shift toward commissioned systems and integrator-led lighting delivery.", "https://electricaltrends.com/2026/09/07/what-cedia-already-knows-about-systems-delivery/", right - left - 4)
+            fitted_story_line(c, left + 4, y - 31, "Zumtobel and Impact Acoustic are combining lighting, acoustics and interior-system design.", "https://edisonreport.com/2026/09/09/zumtobel-and-impact-acoustic-partner-to-improve-quality-of-life-in-enclosed-space/", right - left - 4)
             y -= 57
         else:
             fitted_story_line(c, left + 4, y - 18, story, url, right - left - 4)

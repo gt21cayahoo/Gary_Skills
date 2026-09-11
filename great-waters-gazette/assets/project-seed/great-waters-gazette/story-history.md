@@ -2,6 +2,20 @@
 
 Check this ledger before selecting each edition. Do not reuse the same URL or the same underlying development.
 
+## 2026-09-11
+
+- AI Story of the Day — OpenAI is open to slowing AI development as safety concerns rise — https://www.reuters.com/business/altman-tells-staff-openai-is-open-slowing-ai-development-bloomberg-news-reports-2026-09-11/
+- Microsoft 365 Copilot — Excel's =COPILOT preview retires September 14 — https://www.windowscentral.com/artificial-intelligence/microsoft-copilot/microsoft-is-ditching-the-copilot-function-in-excel-before-it-even-launches
+- ChatGPT — ChatGPT for Financial Services adds licensed data and firm templates — https://www.reuters.com/business/openai-launches-chatgpt-financial-services-industry-2026-09-10/
+- Tesla Manufacturing & Expansion — Cybercab hidden touch joystick may support factory checks and depot repositioning — https://www.caranddriver.com/news/a73667574/tesla-cybercab-joystick-screen-controls/
+- Lighting Industry — CEDIA signals commissioned systems and integrator-led lighting delivery — https://electricaltrends.com/2026/09/07/what-cedia-already-knows-about-systems-delivery/
+- Lighting Industry — Zumtobel and Impact Acoustic combine lighting, acoustics and interior-system design — https://edisonreport.com/2026/09/09/zumtobel-and-impact-acoustic-partner-to-improve-quality-of-life-in-enclosed-space/
+- 3D Printing News — Stratasys brings production tooling, fixtures and end-use workflows to IMTS 2026 — https://investors.stratasys.com/news-events/press-releases/detail/992/stratasys-brings-production-proven-additive-manufacturing
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item remained in the verified three-month queue
+- AI-Powered Solopreneur Business — merchant AI payment-reconciliation setup offer — https://www.expresscomputer.in/news/78-of-indian-businesses-would-switch-payment-gateways-for-ai-capabilities-zoho-survey/138608/
+- Anna Maria Island News — Anna Maria City Pier remediation approaches its final construction phase — https://www.islander.org/2026/09/amcp-remediation-work-wraps-up/
+- Lake Oconee News — Eatonton hosts a 25th-anniversary 9/11 remembrance at Veterans Wall of Honor Park — https://www.facebook.com/putnamcountyga/posts/1359728646334136/
+
 ## 2026-09-10
 
 - AI Story of the Day — ENISA tests Anthropic Mythos 5 and OpenAI GPT-6 Astra — https://www.reuters.com/technology/eus-cybersecurity-agency-granted-access-mythos-5-ai-model-commission-says-2026-09-10/

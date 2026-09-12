@@ -2,6 +2,20 @@
 
 Check this ledger before selecting each edition. Do not reuse the same URL or the same underlying development.
 
+## 2026-09-12
+
+- AI Story of the Day — Senate negotiators weigh frontier-AI duty-of-care requirements — https://www.reuters.com/legal/litigation/us-senate-negotiators-consider-requiring-ai-firms-mitigate-known-major-risks-2026-09-11/
+- Microsoft 365 Copilot — Copilot Pages steering and creation arrives on mobile — https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes
+- ChatGPT — ChatGPT Work adds the Data plugin — https://help.openai.com/en/articles/6825453-chatgpt-release-notes
+- Tesla Manufacturing & Expansion — Tesla takes Semi to Europe as Nevada high-volume production begins — https://www.reuters.com/business/autos-transportation/tesla-eyes-european-freight-market-with-long-delayed-semi-truck-2026-09-11/
+- Lighting Industry — SESCO will acquire Thomas Harris & Co. and enter Virginia — https://inside.lighting/news/26-09/sesco-lighting-acquires-thomas-harris-co-virginia
+- Lighting Industry — GigaTera reportedly ended North American sales — https://inside.lighting/news/26-09/gigatera-usa-lighting-operations-go-dark
+- 3D Printing News — NIST RM 8047 standardizes photopolymer cure testing — https://www.voxelmatters.com/nist-reference-material-aims-to-standardize-photopolymer-3d-printing/
+- Porsche 997 & 911 — standard Porsche 911 997 road test — https://www.youtube.com/watch?v=RAc-_ePJH4o
+- AI-Powered Solopreneur Business — AI-growth sprint for sub-10-person firms — https://www.axios.com/2026/09/10/ai-hiring-small-business
+- Anna Maria Island News — Marina Drive/56th Street closure extended through at least September 25 — https://www.islander.org/2026/09/marina-drive-closure-extended-into-late-september/
+- Lake Oconee News — Eatonton Downtown Getdown concert and food vendors — https://lakeoconeelife.com/lake-oconee-calendar-of-events/downtown-getdown-concert-series0912
+
 ## 2026-09-11
 
 - AI Story of the Day — OpenAI is open to slowing AI development as safety concerns rise — https://www.reuters.com/business/altman-tells-staff-openai-is-open-slowing-ai-development-bloomberg-news-reports-2026-09-11/

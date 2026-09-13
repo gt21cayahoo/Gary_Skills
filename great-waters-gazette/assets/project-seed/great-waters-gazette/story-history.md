@@ -2,6 +2,20 @@
 
 Check this ledger before selecting each edition. Do not reuse the same URL or the same underlying development.
 
+## 2026-09-13
+
+- AI Story of the Day — Reuters and CuttingRoom add AI-assisted browser video editing — https://www.reuters.com/media-center/reuters-cuttingroom-partner-provide-newsrooms-with-ai-assisted-video-editing-2026-09-12/
+- Microsoft 365 Copilot — Copilot opens cited Outlook emails beside chat — https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes
+- ChatGPT — Box, Dropbox and SharePoint arrive in Library — https://help.openai.com/en/articles/6825453-chatgpt-release-notes
+- Tesla Manufacturing & Expansion — Cybercab parallel-module line claims five-times speed in half the floor space — https://247wallst.com/cards/tsla-xpost-01m21exw0xh2ccw9q9gtfc4jfs
+- Lighting Industry — Canada's 50% retaliatory tariffs on U.S.-origin lighting products took effect — https://inside.lighting/news/26-09/canadas-50-lighting-tariffs-take-effect
+- Lighting Industry — daylight study finds triple the daylight factor did not reliably support circadian timing — https://inside.lighting/news/26-09/when-more-daylight-doesnt-mean-better-daylight
+- 3D Printing News — AltForm brings the four-laser Print Brilliance 400 platform to IMTS — https://www.voxelmatters.com/altform-to-show-metal-am-systems-at-imts-2026/
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item remained in the verified three-month queue
+- AI-Powered Solopreneur Business — AI video-repackaging service for local newsletters — https://www.reuters.com/media-center/reuters-cuttingroom-partner-provide-newsrooms-with-ai-assisted-video-editing-2026-09-12/
+- Anna Maria Island News — St. Bernard Catholic Church marked September 11 with a special sermon — https://amisun.com/
+- Lake Oconee News — OPAS An Afternoon in Paris at Reynolds Lake Oconee Lake Club — https://visitlakeoconee.com/events/month/2026-09/
+
 ## 2026-09-12
 
 - AI Story of the Day — Senate negotiators weigh frontier-AI duty-of-care requirements — https://www.reuters.com/legal/litigation/us-senate-negotiators-consider-requiring-ai-firms-mitigate-known-major-risks-2026-09-11/

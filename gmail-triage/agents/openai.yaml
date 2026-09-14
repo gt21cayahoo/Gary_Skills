@@ -1,0 +1,9 @@
+interface:
+  display_name: "Gmail Triage"
+  short_description: "Safely triage Gmail with durable sender rules"
+  default_prompt: "Use $gmail-triage to triage my Gmail inbox."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "gmail"
+      description: "Read and safely label messages through the authenticated Gmail connector"

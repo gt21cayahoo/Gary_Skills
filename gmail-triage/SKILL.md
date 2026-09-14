@@ -11,7 +11,7 @@ Use only the authenticated Gmail connector. Do not substitute Apple Mail, browse
 
 1. Read [references/workflow.md](references/workflow.md) completely.
 2. Read [references/sender-registry.md](references/sender-registry.md) completely.
-3. Treat this Gmail registry as authoritative. Update it after each durable user decision or strongly supported automatic spam decision.
+3. Treat the installed local Gmail registry as authoritative. Update it after each durable user decision or strongly supported automatic spam decision. The repository version is a privacy-safe starter; do not publish a user's live sender registry unless they explicitly authorize sharing those addresses and relationship details.
 4. Preserve one normal checkpoint: complete scanning, classification, authorized actions, verification, and report preparation before asking about unresolved senders.
 
 ## Connector workflow

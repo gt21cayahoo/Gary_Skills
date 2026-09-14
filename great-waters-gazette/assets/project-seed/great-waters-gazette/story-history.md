@@ -2,6 +2,20 @@
 
 Check this ledger before selecting each edition. Do not reuse the same URL or the same underlying development.
 
+## 2026-09-14
+
+- AI Story of the Day — Trump dismisses AI-safety warnings while pressing for U.S. leadership — https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/
+- Microsoft 365 Copilot — redesigned chat home, response layout and navigation — https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes
+- ChatGPT — Business admins can test a member's model access — https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes
+- Tesla Manufacturing & Expansion — Tesla registers a Vietnam sales and distribution subsidiary — https://www.reuters.com/world/asia-pacific/tesla-sets-up-vietnam-unit-registration-filing-shows-2026-09-14/
+- Lighting Industry — London Design Festival spotlights seven new lighting designs — https://www.wallpaper.com/design-interiors/lighting-designs-at-london-design-festival-2026
+- Lighting Industry — Synapse Wireless names Trevor Palmer chief executive — https://www.synapsewireless.com/
+- 3D Printing News — single-piece automation for just-in-time printed orthopedic implants — https://www.fabbaloo.com/news/how-single-piece-automation-could-transform-3d-printed-orthopedic-implant-manufacturing
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item remained in the verified three-month queue
+- AI-Powered Solopreneur Business — AI-policy signal brief for regulated small firms — https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/
+- Anna Maria Island News — Bradenton Beach advances a $7.33 million budget at the current millage rate — https://amisun.com/bradenton-beach-commission-adopts-2026-27-budget/
+- Lake Oconee News — Songs & Drives for Lives golf event supports mental-health awareness — https://lakeoconeelife.com/lake-oconee-calendar-of-events
+
 ## 2026-09-13
 
 - AI Story of the Day — Reuters and CuttingRoom add AI-assisted browser video editing — https://www.reuters.com/media-center/reuters-cuttingroom-partner-provide-newsrooms-with-ai-assisted-video-editing-2026-09-12/

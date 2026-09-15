@@ -10,28 +10,28 @@ from reportlab.pdfgen import canvas
 from PIL import Image
 
 ROOT=Path(__file__).resolve().parent
-OUT=ROOT.parent/"output"/"pdf"/"Great_Waters_Gazette_2026-09-14.pdf"
+OUT=ROOT.parent/"output"/"pdf"/"Great_Waters_Gazette_2026-09-15.pdf"
 ARCHIVE=ROOT/"archive"/OUT.name
-PHOTO=ROOT/"assets"/"2026-09-13-picture-of-the-day.jpg"
+PHOTO=ROOT/"assets"/"2026-09-14-picture-of-the-day.jpg"
 CREAM=HexColor("#FBF7E9"); NAVY=HexColor("#173A5E"); LINK=HexColor("#0B5EA8"); TEXT=HexColor("#151515")
 pdfmetrics.registerFont(TTFont("DVSans","/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
 pdfmetrics.registerFont(TTFont("DVSansBold","/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"))
 pdfmetrics.registerFont(TTFont("DVSansOblique","/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
 WEATHER_URL="https://weather.com/us/georgia/eatonton/postcode/31024/tenday"
-PHOTO_URL="https://commons.wikimedia.org/wiki/File:Breil-Brigels._(actm)_02.jpg"
-WEATHER=[("Today","Partly cloudy (15%)","97 / 72"),("Tue 15","Partly cloudy (11%)","92 / 68"),("Wed 16","Mostly sunny (6%)","90 / 63"),("Thu 17","Sunny (5%)","92 / 63"),("Fri 18","Sunny (5%)","95 / 67")]
+PHOTO_URL="https://commons.wikimedia.org/wiki/File:Oregon_National_Historic_Trail_in_Wyoming.jpg"
+WEATHER=[("Today","Partly cloudy (20%)","92 / 69"),("Wed 16","Mostly sunny (8%)","90 / 63"),("Thu 17","Sunny (7%)","92 / 66"),("Fri 18","Mostly sunny (9%)","97 / 69"),("Sat 19","Isolated storms (33%)","94 / 70")]
 STORIES=[
-("AI Story of the Day","Trump dismissed AI-safety warnings as exaggerated while urging the U.S. to keep its technology lead.","https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/"),
-("Microsoft 365 Copilot","Copilot's redesigned chat home and navigation simplify switching; tip: pin the tools you use most.","https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"),
-("ChatGPT","Business admins can test a member's model access; tip: diagnose policy settings before changing them.","https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes"),
-("Tesla Manufacturing & Expansion","Tesla registered a Vietnam subsidiary for sales, parts, machinery, imports and distribution.","https://www.reuters.com/world/asia-pacific/tesla-sets-up-vietnam-unit-registration-filing-shows-2026-09-14/"),
-("Lighting Industry — Story One","London Design Festival spotlights seven new lamps, including Bocci's orb and Raw Edges' low-waste design.","https://www.wallpaper.com/design-interiors/lighting-designs-at-london-design-festival-2026"),
-("Lighting Industry — Story Two","Synapse Wireless named former Acuity Brands president Trevor Palmer as chief executive.","https://www.synapsewireless.com/"),
-("3D Printing News","Single-piece automation points to just-in-time 3D-printed implants with linked inspection and traceability.","https://www.fabbaloo.com/news/how-single-piece-automation-could-transform-3d-printed-orthopedic-implant-manufacturing"),
+("AI Story of the Day","Microsoft drafted rules requiring its AI systems to accept correction, shutdown and human control.","https://www.reuters.com/legal/litigation/microsoft-drafts-code-conduct-keep-its-ai-under-human-control-2026-09-14/"),
+("Microsoft 365 Copilot","Connector content and identity crawls now run together; tip: recheck newly indexed material sooner.","https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"),
+("ChatGPT","Group Managers can administer scoped users; tip: delegate membership work without broad admin access.","https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes"),
+("Tesla Manufacturing & Expansion","Tesla scheduled an October 1 unveiling for its long-delayed second-generation Roadster.","https://www.investors.com/news/tesla-roadster-elon-musk-cybercab-robotaxi/"),
+("Lighting Industry — Story One","IKEA launched a low-cost Matter-compatible driver for integrated cabinet and shelf lighting.","https://www.t3.com/home-living/smart-home/ikeas-matter-compatible-driver-has-finally-launched-after-leaking-6-months-ago-and-its-cheap-as-chips"),
+("Lighting Industry — Story Two","Philips Hue added screen-sync devices, wall panels, rope lights and a gradient floor pole.","https://www.techradar.com/home/smart-lights/philips-hue-just-launched-over-a-dozen-new-smart-lights-and-accessories-heres-every-syncing-device-light-strip-and-wall-panel-worth-your-money"),
+("3D Printing News","SHINING 3D's wireless FreeScan Trak Nova+ captures up to 7.6 million points per second.","https://www.voxelmatters.com/shining-3d-upgrades-the-freescan-trak-nova-scanning-system/"),
 ("Porsche 997 & 911","No worthwhile unused standard 997 road-car item remains in the verified three-month queue.",""),
-("AI-Powered Solopreneur Business","Sell a $1,500 monthly AI-policy signal brief to regulated small firms; validate with three owners.","https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/"),
-("Anna Maria Island News","Bradenton Beach advanced a $7.33 million budget while keeping its current millage rate.","https://amisun.com/bradenton-beach-commission-adopts-2026-27-budget/"),
-("Lake Oconee News","Songs & Drives for Lives tees off at Cuscowilla today to support mental-health awareness.","https://lakeoconeelife.com/lake-oconee-calendar-of-events"),
+("AI-Powered Solopreneur Business","Offer a $2,000 AI client-meeting prep workflow to independent advisers; validate with three RIAs.","https://www.reuters.com/business/anthropic-targets-financial-advisers-with-new-claude-tool-2026-09-14/"),
+("Anna Maria Island News","Anna Maria approved $436,000 to build the city pier's long-awaited T-end.","https://www.islander.org/"),
+("Lake Oconee News","Tuesday Detroit-style pizza night brings a fresh local dining option to the Lake Oconee calendar.","https://lakeoconeelife.com/"),
 ]
 def cover(c,path,x,y,w,h):
     with Image.open(path) as im: iw,ih=im.size
@@ -48,25 +48,25 @@ def line(c,x,y,text,url,maxw):
     c.linkURL(url,(lx,y-2,lx+stringWidth(label,"DVSans",size),y+size),relative=0)
 def build():
     c=canvas.Canvas(str(OUT),pagesize=letter); W,H=letter
-    c.setTitle("Great Waters Gazette — Monday, September 14, 2026"); c.setAuthor("Great Waters Gazette")
+    c.setTitle("Great Waters Gazette — Tuesday, September 15, 2026"); c.setAuthor("Great Waters Gazette")
     c.setFillColor(CREAM); c.rect(0,0,W,H,stroke=0,fill=1)
     c.setFillColor(TEXT); c.setFont("DVSansBold",28); c.drawCentredString(W/2,752,"Great Waters Gazette")
-    c.setFont("DVSans",11); c.drawCentredString(W/2,731,"Monday, September 14, 2026")
+    c.setFont("DVSans",11); c.drawCentredString(W/2,731,"Tuesday, September 15, 2026")
     left,right=40,572; top=704; gap=16; ww=195; px=left+ww+gap; pw=right-px
     c.setFont("DVSansBold",13); c.drawString(left,top,"ZIP 31024 — 5-Day Forecast")
     c.setStrokeColor(NAVY); c.line(left,top-6,left+ww,top-6); y=top-25
     for d,s,t in WEATHER:
         c.setFillColor(TEXT); c.setFont("DVSansBold",8.1); c.drawString(left,y,d)
         c.setFont("DVSans",6.8); c.drawString(left+47,y,s); c.drawRightString(left+ww,y,t); y-=16
-    c.setFillColor(LINK); c.setFont("DVSans",7.3); lab="Weather Channel — 6:00 AM EDT"; c.drawString(left,y-1,lab)
+    c.setFillColor(LINK); c.setFont("DVSans",7.3); lab="Weather Channel — 7:00 AM EDT"; c.drawString(left,y-1,lab)
     c.linkURL(WEATHER_URL,(left,y-3,left+stringWidth(lab,"DVSans",7.3),y+8),relative=0)
     cover(c,PHOTO,px,570,pw,134); c.linkURL(PHOTO_URL,(px,570,right,704),relative=0)
-    c.setFillColor(TEXT); c.setFont("DVSans",6.8); c.drawString(px,559,"Yesterday's Picture: Lag da Breil reservoir at Breil-Brigels, Switzerland.")
-    c.setFillColor(LINK); c.drawString(px,549,"Agnes Monkelbaan / Wikimedia Commons / CC BY-SA 4.0 (cropped)")
+    c.setFillColor(TEXT); c.setFont("DVSans",6.8); c.drawString(px,559,"Yesterday's Picture: Oregon National Historic Trail crossing Wyoming.")
+    c.setFillColor(LINK); c.drawString(px,549,"Bureau of Land Management / Wikimedia Commons / Public domain (cropped)")
     c.linkURL(PHOTO_URL,(px,547,right,558),relative=0)
     c.setFillColor(NAVY); c.roundRect(left,509,right-left,31,4,stroke=1,fill=0)
     c.setFont("DVSansBold",9); c.drawString(left+8,528,"Today's Stoic Practice")
-    c.setFillColor(TEXT); c.setFont("DVSansOblique",7.4); c.drawString(left+8,516,"Begin with what is yours to govern: the next judgment, the next action, and the tone you bring to both.")
+    c.setFillColor(TEXT); c.setFont("DVSansOblique",7.4); c.drawString(left+8,516,"Do the next right thing without needing applause; character becomes visible through quiet repetition.")
     c.setFillColor(LINK); c.drawRightString(right-8,516,"Daily Stoic"); c.linkURL("https://dailystoic.com/podcast/",(right-66,514,right-8,524),relative=0)
     y=486
     for h,s,u in STORIES:

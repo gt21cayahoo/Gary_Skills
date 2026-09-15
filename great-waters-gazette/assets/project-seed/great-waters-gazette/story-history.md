@@ -2,6 +2,20 @@
 
 Check this ledger before selecting each edition. Do not reuse the same URL or the same underlying development.
 
+## 2026-09-15
+
+- AI Story of the Day — Microsoft drafts rules requiring AI systems to accept correction, shutdown and human control — https://www.reuters.com/legal/litigation/microsoft-drafts-code-conduct-keep-its-ai-under-human-control-2026-09-14/
+- Microsoft 365 Copilot — connector content and identity crawls now run in parallel — https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes
+- ChatGPT — Group Managers administer scoped users without broad admin access — https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes
+- Tesla Manufacturing & Expansion — Tesla schedules October 1 unveiling for the second-generation Roadster — https://www.investors.com/news/tesla-roadster-elon-musk-cybercab-robotaxi/
+- Lighting Industry — IKEA launches a Matter-compatible integrated-lighting driver — https://www.t3.com/home-living/smart-home/ikeas-matter-compatible-driver-has-finally-launched-after-leaking-6-months-ago-and-its-cheap-as-chips
+- Lighting Industry — Philips Hue adds screen-sync devices, wall panels, rope lights and a gradient floor pole — https://www.techradar.com/home/smart-lights/philips-hue-just-launched-over-a-dozen-new-smart-lights-and-accessories-heres-every-syncing-device-light-strip-and-wall-panel-worth-your-money
+- 3D Printing News — SHINING 3D upgrades the wireless FreeScan Trak Nova+ scanning system — https://www.voxelmatters.com/shining-3d-upgrades-the-freescan-trak-nova-scanning-system/
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item remained in the verified three-month queue
+- AI-Powered Solopreneur Business — AI client-meeting preparation workflow for independent advisers — https://www.reuters.com/business/anthropic-targets-financial-advisers-with-new-claude-tool-2026-09-14/
+- Anna Maria Island News — Anna Maria approves $436,000 for the city pier T-end — https://www.islander.org/
+- Lake Oconee News — Tuesday Detroit-style pizza night — https://lakeoconeelife.com/
+
 ## 2026-09-14
 
 - AI Story of the Day — Trump dismisses AI-safety warnings while pressing for U.S. leadership — https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/

@@ -2,6 +2,20 @@
 
 Check this ledger before selecting each edition. Do not reuse the same URL or the same underlying development.
 
+## 2026-09-16
+
+- AI Story of the Day — Anthropic signs first Australian data-center lease for a 2.16-GW inference campus — https://www.reuters.com/world/asia-pacific/anthropic-signs-first-australia-data-centre-agreement-2026-09-16/
+- Microsoft 365 Copilot — Microsoft tests Grok in Word, Excel and PowerPoint — https://www.windowscentral.com/artificial-intelligence/microsoft-copilot/grok-is-now-in-microsoft-copilot-but-dont-expect-snark-in-your-spreadsheets
+- ChatGPT — Healthcare Public Data searches approved public sources — https://help.openai.com/en/articles/20001489-using-healthcare-public-data-in-chatgpt-and-codex
+- Tesla Manufacturing & Expansion — Tesla plans more than 100 European Semi Megachargers — https://driveteslacanada.ca/news/tesla-semi-megacharger-network-europe-100-stalls/
+- Lighting Industry — ArchLIGHT Summit opens with smooth setup, zero drayage and expanded education — https://edisonreport.com/2026/09/15/archlight-summit-day-0/
+- Lighting Industry — Sourcery links its specification workspace with OASIS sales software — https://edisonreport.com/2026/09/14/sourcery-partners-with-oasis-sales-software/
+- 3D Printing News — VulcanForms and Specter partner on U.S. hypersonic manufacturing capacity — https://www.voxelmatters.com/vulcanforms-and-specter-aerospace-partner-on-us-hypersonic-manufacturing-capacity/
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item remained in the verified three-month queue
+- AI-Powered Solopreneur Business — AI data-residency readiness audit for Australian SaaS firms — https://www.reuters.com/world/asia-pacific/anthropic-signs-first-australia-data-centre-agreement-2026-09-16/
+- Anna Maria Island News — Fire & Stone regains property access and starts repair planning — https://www.islander.org/2026/09/fire-stone-owners-move-toward-reopening/
+- Lake Oconee News — Beginners Mahjong with Jan White meets September 16 — https://lakeoconeelife.com/calendar
+
 ## 2026-09-15
 
 - AI Story of the Day — Microsoft drafts rules requiring AI systems to accept correction, shutdown and human control — https://www.reuters.com/legal/litigation/microsoft-drafts-code-conduct-keep-its-ai-under-human-control-2026-09-14/

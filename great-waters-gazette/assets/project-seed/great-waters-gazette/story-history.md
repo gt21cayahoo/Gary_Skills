@@ -2,6 +2,20 @@
 
 Check this ledger before selecting each edition. Do not reuse the same URL or the same underlying development.
 
+## 2026-09-17
+
+- AI Story of the Day — OpenAI launches a systematic misalignment-reporting framework and six reports — https://openai.com/index/model-misalignment-reporting-framework/
+- Microsoft 365 Copilot — Brand Kit shares custom PowerPoint skills across an organization — https://support.microsoft.com/en-us/powerpoint/copilot/brand-skill-support-copilot-powerpoint
+- ChatGPT — OpenAI tests clearly labeled advertiser-sponsored business agents — https://www.reuters.com/business/media-telecom/openai-tests-advertiser-sponsored-agents-expands-ai-tools-chatgpt-ads-2026-09-16/
+- Tesla Manufacturing & Expansion — Tesla weighs a $10.1 billion Fort Bend solar-manufacturing plant — https://www.axios.com/local/houston/2026/09/16/tesla-solar-plant-fort-bend-county-lamar-cisd-tax-incentive
+- Lighting Industry — ArchLIGHT demonstrates practical AI for Revit automation, submittals and visualization — https://edisonreport.com/2026/09/16/ai-for-lighting-designers-ardra-zinkon/
+- Lighting Industry — NEMA business-confidence index rises to 65.8 — https://inside.lighting/news/26-09/electrical-manufacturers-see-stronger-business-conditions
+- 3D Printing News — Rainshow revives Beamit and installs EMEA's first six-laser EOS M4 ONYX — https://www.voxelmatters.com/beamit-survives-insolvency-under-rainshow-and-installs-eoss-newest-metal-printer/
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item remained in the verified three-month queue
+- AI-Powered Solopreneur Business — branded Copilot-skill setup for midmarket presentation teams — https://support.microsoft.com/en-us/powerpoint/copilot/brand-skill-support-copilot-powerpoint
+- Anna Maria Island News — Holmes Beach seeks help curbing rental congestion at Kingfish Boat Ramp — https://www.islander.org/2026/09/hb-seeks-help-to-retain-boat-ramp-access/
+- Lake Oconee News — Table at the Lake features Smash Burger from 5–9 PM September 17 — https://lakeoconeelife.com/lake-oconee-calendar-of-events/smash-burger0917
+
 ## 2026-09-16
 
 - AI Story of the Day — Anthropic signs first Australian data-center lease for a 2.16-GW inference campus — https://www.reuters.com/world/asia-pacific/anthropic-signs-first-australia-data-centre-agreement-2026-09-16/

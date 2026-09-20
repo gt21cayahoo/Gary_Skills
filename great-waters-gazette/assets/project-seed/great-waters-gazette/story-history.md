@@ -1,5 +1,19 @@
 # Published story history
 
+## 2026-09-20
+
+- AI Story of the Day — IMF says AI could lift European productivity while widening inequality and straining power grids — https://www.reuters.com/business/imf-tells-eu-ministers-ai-could-boost-growth-increase-economic-strains-2026-09-19/
+- Microsoft 365 Copilot — outcome-led Copilot workflows lifted close rates 20% — https://blogs.microsoft.com/blog/2026/09/17/what-weve-learned-from-microsofts-own-ai-transformation/
+- ChatGPT — OpenAI plans to retire custom GPTs and migrate workflows to plugins — https://help.openai.com/en/articles/8554407-gpts-in-chatgpt
+- Tesla Manufacturing & Expansion — Barclays says Shanghai makes over half of Tesla vehicles and exports nearly half its output — https://www.barrons.com/articles/tesla-stock-shanghai-gigafactory-7bb4795b
+- Lighting Industry — Casambi restructures North American sales around local rep agencies — https://edisonreport.com/2026/09/18/casambi-north-america-rep-agency-strategy/
+- Lighting Industry — Amerlux argues for serviceability and long-term lighting performance — https://edisonreport.com/2026/09/18/quality-lighting-bill-plageman/
+- 3D Printing News — Stratasys wins $27.6 million Bambu Lab patent verdict — https://www.voxelmatters.com/stratasys-wins-27-6-million-verdict-against-bambu-lab-in-first-of-two-patent-trials/
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item remained in the verified three-month queue
+- AI-Powered Solopreneur Business — $5,000 AI workflow-redesign sprint for sales teams — https://blogs.microsoft.com/blog/2026/09/17/what-weve-learned-from-microsofts-own-ai-transformation/
+- Anna Maria Island News — Holmes Beach commission candidates debate taxes, rentals and tourist funding — https://www.islander.org/2026/09/lwv-hosts-hb-candidate-forum/
+- Lake Oconee News — OPAS Concert Truck returns to Harbor Club September 20 — https://lakeoconeelife.com/lake-oconee-calendar-of-events/opas-pop-up-series-the-concert-truck-returns0920
+
 Check this ledger before selecting each edition. Do not reuse the same URL or the same underlying development.
 
 ## 2026-09-17

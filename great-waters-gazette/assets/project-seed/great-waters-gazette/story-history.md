@@ -1,5 +1,19 @@
 # Published story history
 
+## 2026-09-21
+
+- AI Story of the Day — U.S. officials proposed an AI-incident alert system with China to flag national-security threats — https://apnews.com/article/2c7f54f07e755f506d9db9b91df282bd
+- Microsoft 365 Copilot — Copilot adds Claude Opus 5 for complex reasoning — https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=555888
+- ChatGPT — OpenAI's Microsoft add-in brings ChatGPT into Word, Excel and PowerPoint — https://marketplace.microsoft.com/en-us/product/office/WA200010215
+- Tesla Manufacturing & Expansion — NHTSA ordered Tesla to explain how it self-certified Cybercab with temporary driver controls — https://www.reuters.com/business/autos-transportation/us-agency-orders-tesla-answer-questions-cybercab-certification-2026-09-15/
+- Lighting Industry — DALI Alliance will convene its first global summit and expo in Utrecht in February 2027 — https://edisonreport.com/2026/09/16/dali-alliance-announces-dali-27-inaugural-global-summit-expo/
+- Lighting Industry — selectable fixtures reduce SKUs but can compromise design intent — https://edisonreport.com/2026/09/16/selectable-lighting-when-one-size-does-not-fit-all/
+- 3D Printing News — IperionX validated continuous titanium-powder production across four campaigns — https://www.voxelmatters.com/iperionx-validates-genx-continuous-titanium-powder-production/
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item remained in the verified three-month queue
+- AI-Powered Solopreneur Business — $3,500 AI incident-readiness drill for exporters — https://apnews.com/article/2c7f54f07e755f506d9db9b91df282bd
+- Anna Maria Island News — Bridge Street's Sundown Getdown mixed local vendors, live art, music and food — https://www.islander.org/2026/09/sundown-party-heats-up-bridge-street/
+- Lake Oconee News — Table at the Lake serves Monday martinis and oysters from 5–9 PM — https://lakeoconeelife.com/lake-oconee-calendar-of-events/mondaymartinis0921
+
 ## 2026-09-20
 
 - AI Story of the Day — IMF says AI could lift European productivity while widening inequality and straining power grids — https://www.reuters.com/business/imf-tells-eu-ministers-ai-could-boost-growth-increase-economic-strains-2026-09-19/

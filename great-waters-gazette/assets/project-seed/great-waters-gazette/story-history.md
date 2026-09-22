@@ -1,5 +1,19 @@
 # Published story history
 
+## 2026-09-22
+
+- AI Story of the Day — Alibaba unveiled its Zhenwu V900 AI chip and plans a 5–10-trillion-parameter model — https://apnews.com/article/b29908e516faff9f5a82b201ba954aab
+- Microsoft 365 Copilot — Copilot unifies work and personal use while keeping account data separate; verify the active account first — https://copilot.com/
+- ChatGPT — ChatGPT Work creates and edits finished documents; ask for the artifact plus a source-and-layout check — https://chatgpt.com/overview/
+- Tesla Manufacturing & Expansion — A California trial opened over alleged discrimination at Tesla's Fremont assembly plant — https://www.reuters.com/legal/government/tesla-faces-major-trial-alleged-bias-against-black-workers-after-years-lawsuits-2026-09-21/
+- Lighting Industry — DLFNY extended Beacon Awards entries and sponsorships for New York lighting design — https://edisonreport.com/2026/09/17/dlfny-announces-final-call-for-3rd-annual-beacon-awards-submissions-and-sponsors/
+- Lighting Industry — no second worthwhile, non-repeated story met the seven-day publication cutoff
+- 3D Printing News — XYZO launched a hybrid platform combining DLP, FDM or pellets with machining and inspection — https://www.tctmagazine.com/xyzo-launches-hybrid-manufacturing-system-that-can-integrate-dlp-fdm-or-pellet-extrusion/
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item remained in the verified three-month queue
+- AI-Powered Solopreneur Business — $1,500 AI-copyright readiness audit for Australian creative agencies — https://www.reuters.com/legal/litigation/anthropic-openai-call-australia-relax-ban-training-ai-models-2026-09-22/
+- Anna Maria Island News — Turtle Watch reported continuing hatchling disorientations with about six weeks left in nesting season — https://www.islander.org/2026/09/nesting-notes-disorientations-continue/
+- Lake Oconee News — The Concert Truck brings a free mobile live-music program to Lakeside Church at 7 PM — https://lakeoconeelife.com/lake-oconee-calendar-of-events/opas-pop-up-series-the-concert-truck-returns0922
+
 ## 2026-09-21
 
 - AI Story of the Day — U.S. officials proposed an AI-incident alert system with China to flag national-security threats — https://apnews.com/article/2c7f54f07e755f506d9db9b91df282bd

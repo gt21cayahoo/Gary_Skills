@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architectural Lighting Weekly Report"
+  short_description: "Research, produce, and publish the weekly lighting report"
+  brand_color: "#4B7891"
+  default_prompt: "Use $architectural-lighting-weekly-report to produce and publish this week’s verified Architectural Lighting Weekly report and website."

@@ -1,5 +1,19 @@
 # Published story history
 
+## 2026-09-23
+
+- AI Story of the Day — Anthropic launched Claude Opus 5.5 with lower running costs and tighter frontier safeguards — https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/
+- Microsoft 365 Copilot — In Copilot, type /apps to open Word, Excel, PowerPoint and other Microsoft 365 tools — https://www.microsoft.com/en-us/microsoft-365
+- ChatGPT — ChatGPT Work can turn a brief, brand book and wireframe into a reusable creative tool — https://www.youtube.com/watch?v=D-QteDHdHes
+- Tesla Manufacturing & Expansion — Tesla reopened $50,000 Roadster reservations ahead of an October 1 production reveal — https://nypost.com/2026/09/21/business/tesla-reopens-roadster-reservations-but-youll-need-50k/
+- Lighting Industry — Nora introduced the 3-inch Apollo downlight with tool-free 45-degree tilt and 361-degree rotation — https://edisonreport.com/2026/09/22/nora-lighting-lesley-yonts-apollo-archlight-2026/
+- Lighting Industry — Phoenix gained exclusive rights and assets for select former Cree Lighting product lines — https://edisonreport.com/2026/09/22/cree-lighting-update-phoenix-beta-led/
+- 3D Printing News — ORNL printed a nearly two-ton steel mold for Boeing's high-rate composite-aircraft work in eight weeks — https://timesofindia.indiatimes.com/science/discovery/oak-ridge-scientists-spent-eight-weeks-3d-printing-a-nearly-2-ton-steel-mold-measuring-6-feet-tall-boeing-will-use-the-massive-tool-in-nasas-project-to-speed-composite-aircraft-manufacturing/articleshow/134411023.cms
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item remained in the verified three-month queue
+- AI-Powered Solopreneur Business — $2,000 AI security-boundary audit for small SaaS firms — https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/
+- Anna Maria Island News — Coquina and Cortez beach repairs are placing 63,450 cubic yards of sand before a larger fall project — https://www.islander.org/2026/09/ami-beaches-enter-new-recovery-phase/
+- Lake Oconee News — Hart & Crown Tavern hosts a four-course European wine dinner from 6:30 to 8 PM — https://lakeoconeelife.com/lake-oconee-calendar-of-events/september-wine-dinner0923
+
 ## 2026-09-22
 
 - AI Story of the Day — Alibaba unveiled its Zhenwu V900 AI chip and plans a 5–10-trillion-parameter model — https://apnews.com/article/b29908e516faff9f5a82b201ba954aab

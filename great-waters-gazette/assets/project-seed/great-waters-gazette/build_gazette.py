@@ -10,9 +10,9 @@ from reportlab.pdfgen import canvas
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "output" / "pdf" / "Great_Waters_Gazette_2026-09-22.pdf"
+OUT = ROOT / "output" / "pdf" / "Great_Waters_Gazette_2026-09-23.pdf"
 ARCHIVE = ROOT / "archive" / OUT.name
-PHOTO = ROOT / "featured-photo.png"
+PHOTO = ROOT / "featured-photo.jpg"
 CREAM = HexColor("#FBF7E9")
 NAVY = HexColor("#173A5E")
 LINK = HexColor("#0B5EA8")
@@ -21,26 +21,26 @@ pdfmetrics.registerFont(TTFont("DVSans", "/usr/share/fonts/truetype/dejavu/DejaV
 pdfmetrics.registerFont(TTFont("DVSansBold", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"))
 pdfmetrics.registerFont(TTFont("DVSansOblique", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
 WEATHER_URL = "https://weather.com/us/georgia/eatonton/postcode/31024/tenday"
-PHOTO_URL = "https://commons.wikimedia.org/wiki/File:The_Blue_Marble,_AS17-148-22727.png"
+PHOTO_URL = "https://commons.wikimedia.org/wiki/File:Beach_of_Cape_Fiolent,_Crimea.jpg"
 WEATHER = [
-    ("Today", "PM thunderstorms (43%)", "90 / 70"),
-    ("Wed 23", "Cloudy (24%)", "80 / 62"),
-    ("Thu 24", "Cloudy (24%)", "73 / 57"),
-    ("Fri 25", "Mostly sunny (5%)", "79 / 54"),
-    ("Sat 26", "Mostly sunny (4%)", "83 / 54"),
+    ("Today", "Cloudy (23%)", "77 / 63"),
+    ("Thu 24", "Cloudy (22%)", "73 / 57"),
+    ("Fri 25", "Partly cloudy (6%)", "79 / 54"),
+    ("Sat 26", "Mostly sunny (5%)", "84 / 55"),
+    ("Sun 27", "Partly cloudy (5%)", "85 / 56"),
 ]
 STORIES = [
-    ("AI Story of the Day", "Alibaba unveiled its Zhenwu V900 AI chip and plans a 5–10-trillion-parameter model.", "https://apnews.com/article/b29908e516faff9f5a82b201ba954aab"),
-    ("Microsoft 365 Copilot", "Copilot unifies work and personal use while keeping account data separate; verify the active account first.", "https://copilot.com/"),
-    ("ChatGPT", "ChatGPT Work creates and edits finished documents; ask for the artifact plus a source-and-layout check.", "https://chatgpt.com/overview/"),
-    ("Tesla Manufacturing & Expansion", "A California trial opened over alleged discrimination at Tesla's Fremont assembly plant.", "https://www.reuters.com/legal/government/tesla-faces-major-trial-alleged-bias-against-black-workers-after-years-lawsuits-2026-09-21/"),
-    ("Lighting Industry — Story One", "DLFNY extended Beacon Awards entries and sponsorships for New York lighting design.", "https://edisonreport.com/2026/09/17/dlfny-announces-final-call-for-3rd-annual-beacon-awards-submissions-and-sponsors/"),
-    ("Lighting Industry — Story Two", "No second worthwhile, non-repeated lighting story met the seven-day publication cutoff.", ""),
-    ("3D Printing News", "XYZO launched a hybrid platform combining DLP, FDM or pellets with machining and inspection.", "https://www.tctmagazine.com/xyzo-launches-hybrid-manufacturing-system-that-can-integrate-dlp-fdm-or-pellet-extrusion/"),
+    ("AI Story of the Day", "Anthropic launched Claude Opus 5.5 with lower running costs and tighter frontier safeguards.", "https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/"),
+    ("Microsoft 365 Copilot", "In Copilot, type /apps to open Word, Excel, PowerPoint and other Microsoft 365 tools.", "https://www.microsoft.com/en-us/microsoft-365"),
+    ("ChatGPT", "ChatGPT Work can turn a brief, brand book and wireframe into a reusable creative tool.", "https://www.youtube.com/watch?v=D-QteDHdHes"),
+    ("Tesla Manufacturing & Expansion", "Tesla reopened $50,000 Roadster reservations ahead of an October 1 production reveal.", "https://nypost.com/2026/09/21/business/tesla-reopens-roadster-reservations-but-youll-need-50k/"),
+    ("Lighting Industry — Story One", "Nora introduced the 3-inch Apollo downlight with tool-free 45-degree tilt and 361-degree rotation.", "https://edisonreport.com/2026/09/22/nora-lighting-lesley-yonts-apollo-archlight-2026/"),
+    ("Lighting Industry — Story Two", "Phoenix gained exclusive rights and assets for select former Cree Lighting product lines.", "https://edisonreport.com/2026/09/22/cree-lighting-update-phoenix-beta-led/"),
+    ("3D Printing News", "ORNL printed a nearly two-ton steel mold for Boeing's high-rate composite-aircraft work in eight weeks.", "https://timesofindia.indiatimes.com/science/discovery/oak-ridge-scientists-spent-eight-weeks-3d-printing-a-nearly-2-ton-steel-mold-measuring-6-feet-tall-boeing-will-use-the-massive-tool-in-nasas-project-to-speed-composite-aircraft-manufacturing/articleshow/134411023.cms"),
     ("Porsche 997 & 911", "No worthwhile unused standard 997 road-car item remains in the verified three-month queue.", ""),
-    ("AI-Powered Solopreneur Business", "Sell a $1,500 AI-copyright readiness audit to Australian creative agencies; validate with two buyers.", "https://www.reuters.com/legal/litigation/anthropic-openai-call-australia-relax-ban-training-ai-models-2026-09-22/"),
-    ("Anna Maria Island News", "Turtle Watch reported continuing hatchling disorientations with about six weeks left in nesting season.", "https://www.islander.org/2026/09/nesting-notes-disorientations-continue/"),
-    ("Lake Oconee News", "The Concert Truck brings a free mobile live-music program to Lakeside Church at 7 tonight.", "https://lakeoconeelife.com/lake-oconee-calendar-of-events/opas-pop-up-series-the-concert-truck-returns0922"),
+    ("AI-Powered Solopreneur Business", "Sell a $2,000 AI security-boundary audit to small SaaS firms; validate with two CTO interviews.", "https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/"),
+    ("Anna Maria Island News", "Coquina and Cortez beach repairs are placing 63,450 cubic yards of sand before a larger fall project.", "https://www.islander.org/2026/09/ami-beaches-enter-new-recovery-phase/"),
+    ("Lake Oconee News", "Hart & Crown Tavern hosts a four-course European wine dinner from 6:30 to 8 tonight.", "https://lakeoconeelife.com/lake-oconee-calendar-of-events/september-wine-dinner0923"),
 ]
 
 
@@ -77,7 +77,7 @@ def build():
     ARCHIVE.parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(OUT), pagesize=letter)
     width, height = letter
-    c.setTitle("Great Waters Gazette — Tuesday, September 22, 2026")
+    c.setTitle("Great Waters Gazette — Wednesday, September 23, 2026")
     c.setAuthor("Great Waters Gazette")
     c.setFillColor(CREAM)
     c.rect(0, 0, width, height, stroke=0, fill=1)
@@ -85,7 +85,7 @@ def build():
     c.setFont("DVSansBold", 28)
     c.drawCentredString(width / 2, 752, "Great Waters Gazette")
     c.setFont("DVSans", 11)
-    c.drawCentredString(width / 2, 731, "Tuesday, September 22, 2026")
+    c.drawCentredString(width / 2, 731, "Wednesday, September 23, 2026")
 
     left, right, top = 40, 572, 704
     weather_width, gap = 195, 16
@@ -106,7 +106,7 @@ def build():
         y -= 16
     c.setFillColor(LINK)
     c.setFont("DVSans", 7.3)
-    weather_label = "Weather Channel — 6:17 AM EDT"
+    weather_label = "Weather Channel — 6:12 AM EDT"
     c.drawString(left, y - 1, weather_label)
     c.linkURL(WEATHER_URL, (left, y - 3, left + stringWidth(weather_label, "DVSans", 7.3), y + 8), relative=0)
 
@@ -116,7 +116,7 @@ def build():
     c.setFont("DVSans", 6.8)
     c.drawString(photo_x, 559, "Yesterday's Picture: The Blue Marble from Apollo 17.")
     c.setFillColor(LINK)
-    credit = "Harrison Schmitt / NASA / Public domain (cropped)"
+    credit = "Vyacheslav Argenberg / CC BY 4.0 (cropped)"
     c.drawString(photo_x, 549, credit)
     c.linkURL(PHOTO_URL, (photo_x, 547, photo_x + stringWidth(credit, "DVSans", 6.8), 558), relative=0)
 
@@ -126,7 +126,7 @@ def build():
     c.drawString(left + 8, 528, "Today's Stoic Practice")
     c.setFillColor(TEXT)
     c.setFont("DVSansOblique", 7.4)
-    practice = "Choose one duty, do it without complaint, then let the result belong to the day."
+    practice = "Meet the first inconvenience as training: pause, choose the useful response, and begin."
     c.drawString(left + 8, 516, practice)
     c.setFillColor(LINK)
     c.drawRightString(right - 8, 516, "Daily Stoic")

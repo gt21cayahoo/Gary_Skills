@@ -1,5 +1,19 @@
 # Published story history
 
+## 2026-09-27
+
+- AI Story of the Day — Anthropic committed $11.6 billion to Akamai for seven years of distributed CPU cloud capacity — https://www.akamai.com/newsroom/press-release/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand
+- Microsoft 365 Copilot — New Copilot adds Home, Code and Autopilot; use Home to resume recent work without rebuilding context — https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/
+- ChatGPT — Security history now lists sign-ins and authentication changes; review it under Settings > Security and login — https://help.openai.com/en/articles/6825453/chatgpt-release-notes
+- Tesla Manufacturing & Expansion — Tesla opened its Sparks factory for high-volume Semi production, targeting 50,000 trucks yearly — https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/
+- Lighting Industry — Massachusetts, New York and Washington now recognize DLC LUNA as an outdoor-lighting compliance path — https://edisonreport.com/2026/09/24/states-are-choosing-luna-heres-why-that-matters/
+- Lighting Industry — Precise LED pairs 1.5-inch downlights with remote drivers and custom curved linear fixtures — https://edisonreport.com/2026/09/24/precise-leds-birgit-collins-on-1-5-downlights-the-new-wave-fixture-and-a-career-built-on-custom-lighting/
+- 3D Printing News — Phrozen's Revo MAX combines a 14-inch 16K panel, dual heating and a 2-liter vat for large resin jobs — https://www.3dnatives.com/en/phrozen-sonic-mighty-revo-16k-max-22092026/
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item passed the verified three-month access and recency checks
+- AI-Powered Solopreneur Business — $1,500 Copilot FinOps setup for 10–50-person firms — https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/
+- Anna Maria Island News — Manatee County detectives identified the victim in a September 18 drowning near Passage Key — https://www.islander.org/2026/09/passage-key-drowning-victim-indentified/
+- Lake Oconee News — Table at the Lake hosts a PlumpJack dinner with four Napa producers tonight from 5:30 to 9:30 — https://lakeoconeelife.com/lake-oconee-calendar-of-events/plumpjack-collection-wine-dinner0927
+
 ## 2026-09-23
 
 - AI Story of the Day — Anthropic launched Claude Opus 5.5 with lower running costs and tighter frontier safeguards — https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/

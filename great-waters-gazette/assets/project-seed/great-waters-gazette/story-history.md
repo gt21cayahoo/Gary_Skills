@@ -1,5 +1,19 @@
 # Published story history
 
+## 2026-09-28
+
+- AI Story of the Day — Bill Gates called unmonitored AI irresponsible and urged legal safeguards against catastrophic misuse — https://www.aljazeera.com/news/2026/9/27/bill-gates-says-ai-without-regulation-is-completely-irresponsible
+- Microsoft 365 Copilot — Copilot now lets users edit scheduled prompts; retime recurring work instead of rebuilding it — https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=531912
+- ChatGPT — ChatGPT Live now works with plugins; start by asking Voice to use one, then approve actions on screen — https://help.openai.com/en/articles/20001274-chatgpt-voice
+- Tesla Manufacturing & Expansion — A California trial opened over claims that Tesla allowed pervasive racial abuse at its Fremont factory — https://www.theguardian.com/technology/2026/sep/21/black-employees-accuse-tesla-fostering-discrimination
+- Lighting Industry — Acuity heads into Thursday's results with lighting sales softness and a new segment president in place — https://inside.lighting/news/26-09/5-things-know-september-26
+- Lighting Industry — ArchLIGHT drew 90-plus brands and will join Dallas Lighting Week in June 2027 — https://edisonreport.com/2026/09/24/archlight-summit-celebrates-successful-2026-event-sets-stage-for-2027/
+- 3D Printing News — Bambu Lab patented a housing-actuated dual-hotend switch that removes a motor from the printhead — https://www.fabbaloo.com/news/tuozhu-patent-uses-printer-housing-to-switch-hotends
+- Porsche 997 & 911 — no worthwhile unused standard 997 road-car item passed the verified three-month access and recency checks
+- AI-Powered Solopreneur Business — $750 AI-safeguard audit for small firms, validated with three owner interviews — https://www.aljazeera.com/news/2026/9/27/bill-gates-says-ai-without-regulation-is-completely-irresponsible
+- Anna Maria Island News — Bradenton Beach commissioners are weighing a 13-page media and municipal social-media policy — https://www.islander.org/2026/09/bb-commission-weighs-proposed-communications-policy/
+- Lake Oconee News — Lake Oconee Bistro hosts a Different Eras trivia night in Eatonton from 6 to 7 tonight — https://lakeoconeelife.com/lake-oconee-calendar-of-events/trivia-night-at-lake-oconee-bistro0928
+
 ## 2026-09-27
 
 - AI Story of the Day — Anthropic committed $11.6 billion to Akamai for seven years of distributed CPU cloud capacity — https://www.akamai.com/newsroom/press-release/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand

@@ -1,5 +1,19 @@
 # Published story history
 
+## 2026-09-29
+
+- AI Story of the Day — OpenAI shelved its planned GPT-6.1 Astra release after internal tests raised safety and oversight concerns — https://www.reuters.com/business/openai-shelves-new-ai-model-after-internal-safety-tests-wsj-reports-2026-09-28/
+- Microsoft 365 Copilot — Copilot in Excel now links to changed sheets, ranges and charts; use those links to audit edits in context — https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes
+- ChatGPT — ChatGPT for Word drafts and revises in a sidebar; select text and specify exactly what must stay unchanged — https://help.openai.com/en/articles/20001526-chatgpt-for-word
+- Tesla Manufacturing & Expansion — Giga Nevada marked its six-millionth drive unit as Tesla ramps Semi and Cybercab production — https://www.teslabriefing.com/en/articles/product-giga-nevada-6-millionth-drive-unit-2026-09-27
+- Lighting Industry — Luminis launched Hollowcore Element, a circular luminous-ring family with a distinctive open interior core — https://www.lightdirectory.com/news-Luminis-Launches-Hollowcore-Element-Luminaire-Family.htm
+- Lighting Industry — A $3.6 million NIH-backed trial will test tunable, sensor-led lighting for dementia care in 10 nursing homes — https://edisonreport.com/2026/09/28/nih-grant-supports-smart-lighting-research-for-dementia-care/
+- 3D Printing News — AI found six workable settings for NASA's GRCop-42 alloy in 40 trials, including a first 500-watt print — https://www.3dnatives.com/en/grcop-42-28092026/
+- Porsche 997 & 911 — A five-year 997.2 Targa 4S ownership review explains why its road-car blend keeps winning long-term loyalty — https://www.youtube.com/watch?v=yTkcDDtwvCM
+- AI-Powered Solopreneur Business — $1,200 ChatGPT-for-Word proposal sprint for boutique consultancies, validated with three paid-pilot pitches — https://help.openai.com/en/articles/20001526-chatgpt-for-word
+- Anna Maria Island News — Employee complaints resurfaced as Amber LaRowe prepares to become Anna Maria's first city administrator — https://amisun.com/employee-complaints-resurface-in-anna-maria/
+- Lake Oconee News — Truth in Art opens at Steffen Thomas Museum at 4 PM today and runs through Saturday — https://lakeoconeelife.com/lake-oconee-calendar-of-events/truth-in-art0929
+
 ## 2026-09-28
 
 - AI Story of the Day — Bill Gates called unmonitored AI irresponsible and urged legal safeguards against catastrophic misuse — https://www.aljazeera.com/news/2026/9/27/bill-gates-says-ai-without-regulation-is-completely-irresponsible

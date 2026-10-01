@@ -1,5 +1,9 @@
 # Story carryover
 
+## 2026-10-01
+
+No runner-up stories were retained after the October 1 edition.
+
 ## 2026-09-29
 
 No runner-up stories were retained after the September 29 edition.

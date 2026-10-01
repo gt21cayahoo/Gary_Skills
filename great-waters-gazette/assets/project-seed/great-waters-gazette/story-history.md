@@ -1,5 +1,19 @@
 # Published story history
 
+## 2026-10-01
+
+- AI Story of the Day — The FTC opened a consumer-protection probe into OpenAI, Anthropic and other frontier AI developers — https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1
+- Microsoft 365 Copilot — Teams Copilot can analyze recorded screen-shared content alongside meeting chat and transcript; use it to trace decisions to the slide that prompted them — https://www.microsoft.com/microsoft-365/roadmap?featureid=119620
+- ChatGPT — Pro 500 costs $500 monthly and is the only Pro tier with Astra Ultrafast; test whether lower latency pays back before upgrading — https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers
+- Tesla Manufacturing & Expansion — Tesla signed three credit facilities totaling $30 billion, led by a $20 billion delayed-draw term loan — https://www.sec.gov/Archives/edgar/data/1318605/000162828026063820/tsla-20260929.htm
+- Lighting Industry — Third-party-verified industry EPDs now cover linears, downlights, cylinders, troffers and post tops — https://edisonreport.com/2026/09/30/industry-wide-luminaire-epds/
+- Lighting Industry — Signify earned an 88/100 EcoVadis score and its seventh straight Platinum medal, including 100/100 for environment — https://edisonreport.com/2026/09/30/signify-earns-highest-ever-ecovadis-score-and-seventh-consecutive-platinum-medal/
+- 3D Printing News — ADDMAN plans 81 more HP Jet Fusion 5620 Pro printers, taking its MJF fleet above 125 systems — https://www.tctmagazine.com/addman-announces-plans-to-install-81-additional-hp-jet-fusion-5620-pro-3d-printers/
+- Porsche 997 & 911 — no newly published, freely accessible qualifying 997.1/997.2 standard road-car video passed the rolling three-month checks
+- AI-Powered Solopreneur Business — $1,500 meeting-memory setup for consultancies, validated with three paid pilots — https://www.microsoft.com/microsoft-365/roadmap?featureid=119620
+- Anna Maria Island News — A Sarasota Bay Watch youth cleanup mobilized 45 volunteers to remove fishing line, lures, nets and other debris that threatens seabirds — https://amisun.com/monofilament-cleanup-inspires-youth-leadership/
+- Lake Oconee News — Lake Country Books & Gifts combines an independent bookstore with book clubs, author visits, story times and special-order service — https://lakeoconeelife.com/business/lakecountrybooksandgifts
+
 ## 2026-09-29
 
 - AI Story of the Day — OpenAI shelved its planned GPT-6.1 Astra release after internal tests raised safety and oversight concerns — https://www.reuters.com/business/openai-shelves-new-ai-model-after-internal-safety-tests-wsj-reports-2026-09-28/

@@ -1,109 +1,217 @@
+from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
-from reportlab.lib import colors
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.enums import TA_CENTER, TA_LEFT
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image, KeepTogether, PageBreak
-from reportlab.pdfbase.pdfmetrics import stringWidth
-from reportlab.lib.units import inch
+from reportlab.lib.colors import HexColor, Color
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase import pdfmetrics
 from reportlab.lib.utils import ImageReader
-from PIL import Image as PILImage
-from pypdf import PdfReader
-import os, sys
+from PIL import Image
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-OUT = str(ROOT / 'archive' / 'Great_Waters_Gazette_2026-10-01.pdf')
-PHOTO = sys.argv[1] if len(sys.argv) > 1 else str(ROOT / 'assets' / 'photo-of-the-day.jpg')
-Path(OUT).parent.mkdir(parents=True, exist_ok=True)
-NAVY = colors.HexColor('#112A46')
-INK = colors.HexColor('#17202A')
-CREAM = colors.HexColor('#F6F0E3')
-BLUE = colors.HexColor('#245B83')
-MUTED = colors.HexColor('#5B6670')
-RULE = colors.HexColor('#9AA6B2')
+OUT = ROOT / "output" / "Great_Waters_Gazette_2026-10-03.pdf"
+PHOTO = ROOT / "gene-autry.webp"
 
-styles = getSampleStyleSheet()
-title = ParagraphStyle('title', parent=styles['Title'], fontName='Times-Bold', fontSize=23, leading=23, alignment=TA_CENTER, textColor=NAVY, spaceAfter=1)
-date_style = ParagraphStyle('date', parent=styles['Normal'], fontName='Helvetica-Bold', fontSize=8, leading=9, alignment=TA_CENTER, textColor=MUTED, spaceAfter=5)
-section = ParagraphStyle('section', parent=styles['Heading3'], fontName='Helvetica-Bold', fontSize=8.2, leading=9, textColor=NAVY, spaceBefore=2.5, spaceAfter=0.5, borderWidth=0, uppercase=True)
-weather_head = ParagraphStyle('weather_head', parent=section, textColor=colors.white)
-body = ParagraphStyle('body', parent=styles['BodyText'], fontName='Helvetica', fontSize=6.65, leading=7.7, textColor=INK, spaceAfter=2)
-small = ParagraphStyle('small', parent=body, fontSize=5.7, leading=6.6, textColor=MUTED)
-stoic = ParagraphStyle('stoic', parent=body, fontName='Times-Italic', fontSize=7, leading=8, alignment=TA_CENTER, leftIndent=8, rightIndent=8, spaceAfter=3)
+NAVY = HexColor("#17324D")
+INK = HexColor("#20201D")
+MUTED = HexColor("#6B665E")
+CREAM = HexColor("#F7F1E5")
+PAPER = HexColor("#FFFDF8")
+GOLD = HexColor("#B78B47")
+RULE = HexColor("#D5CAB8")
 
-def p(text, style=body):
-    return Paragraph(text, style)
+FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"
+FONT_ITALIC = "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+pdfmetrics.registerFont(TTFont("Gazette", FONT))
+pdfmetrics.registerFont(TTFont("GazetteBold", FONT_BOLD))
+pdfmetrics.registerFont(TTFont("GazetteItalic", FONT_ITALIC))
 
-def item(label, text, url):
-    t = Table([[Paragraph(label.upper(), section)], [Paragraph(text + f' <link href="{url}" color="#245B83"><u>Source</u></link>', body)]], colWidths=[2.66*inch])
-    t.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),0),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),0)]))
-    return t
+WEATHER_URL = "https://weather.com/us/georgia/eatonton/postcode/31024/tenday"
+PHOTO_URL = "https://commons.wikimedia.org/wiki/File:Gene_Autry,_NPG_94_39.jpg"
 
-def bg(canvas, doc):
-    canvas.saveState()
-    canvas.setFillColor(CREAM)
-    canvas.rect(0, 0, letter[0], letter[1], fill=1, stroke=0)
-    canvas.setStrokeColor(NAVY)
-    canvas.setLineWidth(1.1)
-    canvas.line(28, 760, 584, 760)
-    canvas.setFillColor(MUTED)
-    canvas.setFont('Helvetica', 5.5)
-    canvas.drawCentredString(letter[0]/2, 15, 'GREAT WATERS GAZETTE • OCTOBER 1, 2026')
-    canvas.restoreState()
-
-doc = SimpleDocTemplate(OUT, pagesize=letter, rightMargin=26, leftMargin=26, topMargin=22, bottomMargin=21)
-story = [Paragraph('GREAT WATERS GAZETTE', title), Paragraph('THURSDAY, OCTOBER 1, 2026  •  GREAT WATERS, GEORGIA', date_style)]
-
-weather_data = [
-    [p('<b>WEATHER CHANNEL • EATONTON 31024</b>', weather_head), '', '', ''],
-    [p('<b>Today</b>'), p('Mostly Sunny'), p('90 / 68'), p('15%')],
-    [p('<b>Fri 02</b>'), p('PM Showers'), p('88 / 71'), p('46%')],
-    [p('<b>Sat 03</b>'), p('Showers'), p('86 / 71'), p('65%')],
-    [p('<b>Sun 04</b>'), p('Rain'), p('76 / 67'), p('93%')],
-    [p('<b>Mon 05</b>'), p('AM Showers'), p('80 / 59'), p('46%')],
-    [p('<link href="https://weather.com/us/georgia/eatonton/postcode/31024/tenday" color="#245B83"><u>Weather Channel • checked 6:01 AM EDT</u></link>', small), '', '', ''],
+WEATHER = [
+    ("TODAY", "Cloudy", "85 / 71", "21%"),
+    ("SUN 04", "Rain", "75 / 68", "80%"),
+    ("MON 05", "AM Showers", "79 / 61", "63%"),
+    ("TUE 06", "Partly Cloudy", "79 / 57", "16%"),
+    ("WED 07", "Partly Cloudy", "78 / 53", "10%"),
 ]
-wt = Table(weather_data, colWidths=[.72*inch, 1.08*inch, .62*inch, .38*inch], rowHeights=[13, 12, 12, 12, 12, 12, 12])
-wt.setStyle(TableStyle([
-    ('SPAN',(0,0),(3,0)),('SPAN',(0,6),(3,6)),('BACKGROUND',(0,0),(-1,0),NAVY),('TEXTCOLOR',(0,0),(-1,0),colors.white),
-    ('GRID',(0,1),(-1,5),.25,colors.HexColor('#CBD1D7')),('VALIGN',(0,0),(-1,-1),'MIDDLE'),
-    ('ALIGN',(2,1),(-1,5),'CENTER'),('LEFTPADDING',(0,0),(-1,-1),3),('RIGHTPADDING',(0,0),(-1,-1),3),
-    ('TOPPADDING',(0,0),(-1,-1),1),('BOTTOMPADDING',(0,0),(-1,-1),1),
-]))
 
-img = Image(PHOTO, width=2.50*inch, height=1.67*inch)
-caption = p('Tower of the Cathedral of Saint Domnius, Split, Croatia, seen from Diocletian’s Palace. <link href="https://commons.wikimedia.org/wiki/File:Split_Cathedral_Bell_Tower_From_The_Vestibule_-_Split.jpg" color="#245B83"><u>Sumitsurai / CC BY-SA 4.0 (cropped)</u></link>', small)
-photo = Table([[img],[caption]], colWidths=[2.50*inch])
-photo.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),0),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),1)]))
-top = Table([[wt, photo]], colWidths=[2.96*inch, 2.50*inch], hAlign='CENTER')
-top.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),3),('RIGHTPADDING',(0,0),(-1,-1),3)]))
-story += [top, Spacer(1,3), Paragraph('<b>THE DAILY STOIC</b> — Before reacting, separate the event from the story you are telling about it. Write the bare facts in one sentence, then choose the most useful next action. <link href="https://dailystoic.com/" color="#245B83"><u>Daily Stoic</u></link>', stoic)]
+STORIES = [
+    ("AI", "OCT 3", "OpenAI says its agent-hack review is scanning 50 petabytes at a cost above $500,000 a day.", "https://www.theguardian.com/technology/2026/oct/03/openai-review-hacks-australian-government-sites-costing-500000-a-day"),
+    ("M365 COPILOT", "SEP 2026", "Microsoft halted its planned rollout of interactive Copilot agents in Teams meetings after further review.", "https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=383013"),
+    ("CHATGPT", "CURRENT", "OpenAI Presence places managed workspace agents in ChatGPT or Slack for Business and Enterprise teams.", "https://help.openai.com/en/articles/20001405-openai-presence"),
+    ("TESLA", "OCT 2", "Tesla delivered 486,532 vehicles in Q3, beating the 456,896 consensus as European demand recovered.", "https://www.reuters.com/business/autos-transportation/tesla-posts-stronger-than-expected-quarterly-deliveries-2026-10-02/"),
+    ("LIGHTING 1", "OCT 2", "Acuity's Q4 sales rose 2.9% to $1.24B; Intelligent Spaces grew 16.6% while lighting sales slipped 0.4%.", "https://edisonreport.com/2026/10/02/acuity-q4-2026-earnings/"),
+    ("LIGHTING 2", "SEP 29", "Lighting leaders are framing repairable fixtures and subscription lumens as the industry's next operating model.", "https://edisonreport.podbean.com/e/today-in-lighting-29-sep-2026-1790719473/"),
+    ("3D PRINTING", "OCT 2", "Harbin researchers printed conductive cement supercapacitors that store charge while remaining structural.", "https://3dprinting.com/news/harbin-researchers-3d-print-cement-that-stores-electricity/"),
+    ("PORSCHE 997", "3-MO CHECK", "No new, fully accessible standard 997.1/997.2 road-car item passed the access, recency and repeat gates.", None),
+    ("SOLOPRENEUR", "PLAY", "Sell a $900 workspace-agent pilot: map one recurring task, deploy one agent, and validate with three clients.", "https://help.openai.com/en/articles/20001405-openai-presence"),
+    ("ANNA MARIA", "OCT 1", "Anna Maria City Administrator Amber LaRowe resigned on her first effective day in the newly appointed role.", "https://amisun.com/city-administrator-amber-larowe-resigns/"),
+    ("LAKE OCONEE", "OCT 9", "Banks & Shane play Harmony Crossing next Friday; gates open at 6 p.m. and music starts at 7 p.m.", "https://visitlakeoconee.com/event/banks-shane-live-at-the-lake/"),
+]
 
-left = []
-left += [item('Artificial Intelligence', 'The FTC opened a consumer-protection probe into OpenAI, Anthropic and other frontier AI developers.', 'https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1')]
-left += [item('Microsoft 365 Copilot', 'Teams Copilot can analyze recorded screen-shared content alongside meeting chat and transcript; use it to trace decisions to the slide that prompted them.', 'https://www.microsoft.com/microsoft-365/roadmap?featureid=119620')]
-left += [item('ChatGPT', 'Pro 500 costs $500 monthly and is the only Pro tier with Astra Ultrafast; test whether lower latency pays back before upgrading.', 'https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers')]
-left += [item('Tesla', 'Tesla signed three credit facilities totaling $30 billion, led by a $20 billion delayed-draw term loan.', 'https://www.sec.gov/Archives/edgar/data/1318605/000162828026063820/tsla-20260929.htm')]
-left += [item('Lighting • 1', 'Third-party-verified industry EPDs now cover linears, downlights, cylinders, troffers and post tops.', 'https://edisonreport.com/2026/09/30/industry-wide-luminaire-epds/')]
-left += [item('Lighting • 2', 'Signify earned an 88/100 EcoVadis score and its seventh straight Platinum medal, including 100/100 for environment.', 'https://edisonreport.com/2026/09/30/signify-earns-highest-ever-ecovadis-score-and-seventh-consecutive-platinum-medal/')]
 
-right = []
-right += [item('3D Printing', 'ADDMAN plans 81 more HP Jet Fusion 5620 Pro printers, taking its MJF fleet above 125 systems.', 'https://www.tctmagazine.com/addman-announces-plans-to-install-81-additional-hp-jet-fusion-5620-pro-3d-printers/')]
-right += [item('Porsche 997 Watch', 'No newly published, freely accessible qualifying 997.1/997.2 standard road-car video was verified in the rolling three-month window today.', 'https://www.youtube.com/results?search_query=Porsche+997+review')]
-right += [item('Solopreneur Move', 'Sell a $1,500 meeting-memory setup for consultancies: configure searchable Teams recordings, pilot it with three firms, and measure time saved finding decisions.', 'https://www.microsoft.com/microsoft-365/roadmap?featureid=119620')]
-right += [item('Anna Maria Island', 'A Sarasota Bay Watch youth cleanup mobilized 45 volunteers to remove fishing line, lures, nets and other debris that threatens seabirds.', 'https://amisun.com/monofilament-cleanup-inspires-youth-leadership/')]
-right += [item('Lake Oconee', 'Lake Country Books & Gifts in Harmony Crossing combines an independent bookstore with book clubs, author visits, story times and special-order service.', 'https://lakeoconeelife.com/business/lakecountrybooksandgifts')]
-right += [Paragraph('TODAY IN ONE LINE', section), Paragraph('Watch the rain trend, test premium AI against real latency value, and turn meeting search into a measurable client service.', body)]
+def fit_text(c, text, font, max_size, min_size, width):
+    size = max_size
+    while size > min_size and c.stringWidth(text, font, size) > width:
+        size -= 0.1
+    return max(size, min_size)
 
-left_col = Table([[x] for x in left], colWidths=[2.68*inch])
-right_col = Table([[x] for x in right], colWidths=[2.68*inch])
-for inner in (left_col, right_col):
-    inner.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),0),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),0)]))
-cols = Table([[left_col, right_col]], colWidths=[2.72*inch, 2.72*inch], hAlign='CENTER')
-cols.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LINEBEFORE',(1,0),(1,0),.7,NAVY),('LEFTPADDING',(0,0),(0,0),4),('RIGHTPADDING',(0,0),(0,0),8),('LEFTPADDING',(1,0),(1,0),9),('RIGHTPADDING',(1,0),(1,0),3)]))
-story.append(cols)
-doc.build(story, onFirstPage=bg, onLaterPages=bg)
-r = PdfReader(OUT)
-if len(r.pages) != 1:
-    raise SystemExit(f'ERROR: PDF has {len(r.pages)} pages')
-print(OUT)
+
+def link_text(c, text, x, y, font, size, color, url=None):
+    c.setFont(font, size)
+    c.setFillColor(color)
+    c.drawString(x, y, text)
+    if url:
+        w = c.stringWidth(text, font, size)
+        c.linkURL(url, (x, y - 2, x + w, y + size + 1), relative=0)
+
+
+def build():
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    c = canvas.Canvas(str(OUT), pagesize=letter)
+    W, H = letter
+    c.setTitle("Great Waters Gazette — October 3, 2026")
+    c.setAuthor("Great Waters Gazette")
+    c.setFillColor(CREAM)
+    c.rect(0, 0, W, H, stroke=0, fill=1)
+
+    # Masthead
+    c.setFillColor(NAVY)
+    c.rect(0, H - 88, W, 88, stroke=0, fill=1)
+    c.setFillColor(GOLD)
+    c.rect(34, H - 24, 544, 1.4, stroke=0, fill=1)
+    c.setFont("GazetteBold", 24)
+    c.setFillColor(PAPER)
+    c.drawCentredString(W / 2, H - 54, "GREAT WATERS GAZETTE")
+    c.setFont("Gazette", 8.2)
+    c.setFillColor(HexColor("#E8DCC8"))
+    c.drawCentredString(W / 2, H - 72, "SATURDAY, OCTOBER 3, 2026  •  EATONTON, GEORGIA")
+
+    # Weather and licensed photo band
+    c.setFillColor(PAPER)
+    c.roundRect(34, 572, 544, 118, 7, stroke=0, fill=1)
+    c.setStrokeColor(RULE)
+    c.roundRect(34, 572, 544, 118, 7, stroke=1, fill=0)
+    c.setFont("GazetteBold", 9.2)
+    c.setFillColor(NAVY)
+    c.drawString(48, 672, "FIVE-DAY OUTLOOK")
+    link_text(c, "THE WEATHER CHANNEL", 295, 672, "GazetteBold", 6.4, GOLD, WEATHER_URL)
+    c.setFont("Gazette", 5.9)
+    c.setFillColor(MUTED)
+    c.drawString(48, 661, "Eatonton, GA 31024  •  observed 6:05 a.m. EDT")
+
+    xcols = [48, 118, 240, 326]
+    y = 645
+    for day, cond, temps, precip in WEATHER:
+        c.setStrokeColor(HexColor("#E9E1D4"))
+        c.line(48, y - 4, 390, y - 4)
+        c.setFont("GazetteBold", 6.5)
+        c.setFillColor(NAVY)
+        c.drawString(xcols[0], y, day)
+        c.setFont("Gazette", 6.5)
+        c.setFillColor(INK)
+        c.drawString(xcols[1], y, cond)
+        c.drawString(xcols[2], y, temps)
+        c.drawRightString(390, y, precip)
+        y -= 16
+    c.setFont("Gazette", 5.4)
+    c.setFillColor(MUTED)
+    c.drawString(240, 651, "HIGH / LOW")
+    c.drawRightString(390, 651, "PRECIP.")
+
+    # Photo crop
+    with Image.open(PHOTO) as im:
+        iw, ih = im.size
+    box_x, box_y, box_w, box_h = 410, 588, 80, 86
+    c.saveState()
+    p = c.beginPath()
+    p.roundRect(box_x, box_y, box_w, box_h, 4)
+    c.clipPath(p, stroke=0, fill=0)
+    scale = max(box_w / iw, box_h / ih)
+    dw, dh = iw * scale, ih * scale
+    c.drawImage(ImageReader(str(PHOTO)), box_x + (box_w - dw) / 2, box_y + (box_h - dh) / 2, dw, dh, mask="auto")
+    c.restoreState()
+    c.setFont("GazetteBold", 6.2)
+    c.setFillColor(NAVY)
+    c.drawString(500, 665, "YESTERDAY'S IMAGE")
+    c.setFont("Gazette", 5.8)
+    c.setFillColor(INK)
+    c.drawString(500, 652, "Gene Autry, 1942")
+    c.drawString(500, 643, "POTD • Oct. 2")
+    c.setFillColor(MUTED)
+    c.drawString(500, 629, "Warnecke & Cranston")
+    c.drawString(500, 620, "NPG / Smithsonian")
+    link_text(c, "CC0 • COMMONS", 500, 603, "GazetteBold", 5.6, GOLD, PHOTO_URL)
+
+    # Stoic practice
+    c.setFillColor(NAVY)
+    c.roundRect(34, 528, 544, 31, 5, stroke=0, fill=1)
+    c.setFont("GazetteBold", 7.1)
+    c.setFillColor(GOLD)
+    c.drawString(47, 546, "STOIC PRACTICE")
+    c.setFont("GazetteItalic", 7.4)
+    c.setFillColor(PAPER)
+    c.drawString(124, 546, "Name the duty you are resisting. Give it ten focused minutes before negotiating with yourself.")
+    link_text(c, "DAILY STOIC", 500, 533, "GazetteBold", 5.4, HexColor("#E8DCC8"), "https://dailystoic.com/podcast/")
+
+    # Story ledger — every summary is rendered on exactly one line.
+    top = 507
+    row_h = 29
+    for i, (label, date, summary, url) in enumerate(STORIES):
+        y0 = top - i * row_h
+        if i % 2 == 0:
+            c.setFillColor(Color(1, 1, 1, alpha=0.42))
+            c.rect(34, y0 - 20, 544, row_h, stroke=0, fill=1)
+        c.setStrokeColor(RULE)
+        c.line(34, y0 - 21, 578, y0 - 21)
+        c.setFont("GazetteBold", 7.2)
+        c.setFillColor(NAVY)
+        c.drawString(42, y0, label)
+        c.setFont("Gazette", 5.2)
+        c.setFillColor(GOLD)
+        c.drawString(42, y0 - 9, date)
+        source_x = 535
+        summary_x = 122
+        summary_w = source_x - summary_x - 9
+        size = fit_text(c, summary, "Gazette", 6.7, 5.35, summary_w)
+        link_text(c, summary, summary_x, y0 - 4, "Gazette", size, INK, url)
+        if url:
+            link_text(c, "SOURCE ↗", source_x, y0 - 4, "GazetteBold", 5.1, GOLD, url)
+        else:
+            c.setFont("GazetteBold", 5.1)
+            c.setFillColor(MUTED)
+            c.drawString(source_x, y0 - 4, "NO ITEM")
+
+    # One-line close
+    c.setFillColor(PAPER)
+    c.roundRect(34, 146, 544, 43, 6, stroke=0, fill=1)
+    c.setStrokeColor(GOLD)
+    c.setLineWidth(1)
+    c.roundRect(34, 146, 544, 43, 6, stroke=1, fill=0)
+    c.setFont("GazetteBold", 7)
+    c.setFillColor(GOLD)
+    c.drawString(47, 173, "THE DAY IN ONE LINE")
+    close = "Agents grow up, vehicle demand rebounds, smart spaces outpace fixtures, and lake country lines up its next Friday night."
+    size = fit_text(c, close, "GazetteItalic", 7.4, 6.3, 515)
+    c.setFont("GazetteItalic", size)
+    c.setFillColor(NAVY)
+    c.drawString(47, 158, close)
+
+    c.setStrokeColor(NAVY)
+    c.line(34, 122, 578, 122)
+    c.setFont("Gazette", 5.5)
+    c.setFillColor(MUTED)
+    c.drawString(34, 110, "Fresh links. Plain-English takeaways. One page for a better Saturday.")
+    c.drawRightString(578, 110, "GREAT WATERS GAZETTE • OCTOBER 3, 2026")
+    c.setFont("Gazette", 4.8)
+    c.drawString(34, 98, "Weather: The Weather Channel. Photo: Harry Warnecke & Robert F. Cranston / National Portrait Gallery, Smithsonian; CC0 via Wikimedia Commons.")
+
+    c.showPage()
+    c.save()
+    print(OUT)
+
+
+if __name__ == "__main__":
+    build()

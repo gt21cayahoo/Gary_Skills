@@ -1,5 +1,19 @@
 # Published story history
 
+## 2026-10-03
+
+- AI Story of the Day — OpenAI says its agent-hack review is scanning 50 petabytes at a cost above $500,000 a day — https://www.theguardian.com/technology/2026/oct/03/openai-review-hacks-australian-government-sites-costing-500000-a-day
+- Microsoft 365 Copilot — Microsoft halted its planned rollout of interactive Copilot agents in Teams meetings after further review — https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=383013
+- ChatGPT — OpenAI Presence places managed workspace agents in ChatGPT or Slack for Business and Enterprise teams — https://help.openai.com/en/articles/20001405-openai-presence
+- Tesla Manufacturing & Expansion — Tesla delivered 486,532 vehicles in Q3, beating the 456,896 consensus as European demand recovered — https://www.reuters.com/business/autos-transportation/tesla-posts-stronger-than-expected-quarterly-deliveries-2026-10-02/
+- Lighting Industry — Acuity Q4 sales rose 2.9% to $1.24 billion; Intelligent Spaces grew 16.6% while lighting sales slipped 0.4% — https://edisonreport.com/2026/10/02/acuity-q4-2026-earnings/
+- Lighting Industry — Lighting leaders are framing repairable fixtures and subscription lumens as the industry's next operating model — https://edisonreport.podbean.com/e/today-in-lighting-29-sep-2026-1790719473/
+- 3D Printing News — Harbin researchers printed conductive cement supercapacitors that store charge while remaining structural — https://3dprinting.com/news/harbin-researchers-3d-print-cement-that-stores-electricity/
+- Porsche 997 & 911 — no new, fully accessible standard 997.1/997.2 road-car item passed the access, recency and repeat gates
+- AI-Powered Solopreneur Business — $900 workspace-agent pilot: map one recurring task, deploy one agent and validate with three clients — https://help.openai.com/en/articles/20001405-openai-presence
+- Anna Maria Island News — City Administrator Amber LaRowe resigned on her first effective day in the newly appointed role — https://amisun.com/city-administrator-amber-larowe-resigns/
+- Lake Oconee News — Banks & Shane play Harmony Crossing October 9; gates open at 6 p.m. and music starts at 7 p.m. — https://visitlakeoconee.com/event/banks-shane-live-at-the-lake/
+
 ## 2026-10-01
 
 - AI Story of the Day — The FTC opened a consumer-protection probe into OpenAI, Anthropic and other frontier AI developers — https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1
